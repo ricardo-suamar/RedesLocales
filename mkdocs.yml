@@ -32,6 +32,42 @@ theme:
     - search.highlight         # Resalta las palabras buscadas
     - content.code.copy        # Botón para copiar bloques de código
 
+markdown_extensions:
+  # === Cajas de llamada (Admonitions) ===
+  - admonition
+  - pymdownx.details            # Cajas colapsables (!!! details "Título")
+  - pymdownx.superfences         # Bloques de código avanzados y diagramas (Mermaid)
+
+  # === Código y pestañas ===
+  - pymdownx.highlight:         # Resaltado de sintaxis en código
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite       # Resaltado de código en línea (`código`)
+  - pymdownx.tabbed:            # Pestañas de contenido/código (=== "Python")
+      alternate_style: true
+
+  # === Formato de texto y emojis ===
+  - pymdownx.emoji:             # Emojis (:smile:) e iconos de Material/FontAwesome
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.betterem           # Mejora el uso de negritas y cursivas (*_text_*)
+  - pymdownx.caret               # Texto superíndice y subrayado (^texto^ o ^^texto^^)
+  - pymdownx.tilde               # Subíndice y tachado (~texto~ o ~~texto~~)
+  - pymdownx.mark                # Resaltar texto estilo fosforito (==texto==)
+  - pymdownx.keys                # Estilo para teclas ([[Ctrl]] + [[C]])
+  - pymdownx.smartsymbols        # Convierte (c) en ©, (tm) en ™, etc.
+
+  # === Listas y tablas avanzadas ===
+  - pymdownx.tasklist:          # Listas de tareas interactiva (- [x] Hecho)
+      custom_checkbox: true
+  - attr_list                   # Permite añadir clases/estilos a elementos ({: .my-class})
+  - md_in_html                  # Permite escribir Markdown dentro de etiquetas HTML
+
+  # === Matemáticas (LaTeX) ===
+  - pymdownx.arithmatex:        # Renderizado de ecuaciones ($E = mc^2$)
+      generic: true
+
 nav:
   - Inicio: index.md
   - Tema 1 - Introducción: tema1.md
