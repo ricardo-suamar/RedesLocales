@@ -76,3 +76,4 @@ markdown_extensions:
 nav:
   - Inicio: index.md
   - Tema 1 - Introducción: tema1.md
+  - Tema 2 - Introducción: tema2.md
