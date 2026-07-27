@@ -32,6 +32,11 @@ theme:
     - search.highlight         # Resalta las palabras buscadas
     - content.code.copy        # Botón para copiar bloques de código
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 nav:
   - Inicio: index.md
   - Tema 1 - Introducción: tema1.md
