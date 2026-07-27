@@ -1,0 +1,33 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches:
+      - main  # O 'master', según el nombre de tu rama principal
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Descargar el código del repositorio
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Configurar Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      # 3. Instalar MkDocs y sus complementos (Añade aquí los plugins que uses)
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material
+
+      # 4. Compilar y Desplegar en la rama gh-pages automáticamente
+      - name: Deploy to GitHub Pages
+        run: |
+          mkdocs gh-deploy --force
