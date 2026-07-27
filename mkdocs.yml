@@ -4,25 +4,33 @@ site_description: Material de estudio y apuntes para los alumnos
 theme:
   name: material
   palette:
-    # Modo claro / oscuro automático
+    # Modo Claro
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: teal
+      accent: orange
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: Cambiar a modo oscuro
+    # Modo Oscuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: teal
+      accent: orange
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Cambiar a modo claro
+  font:
+    text: Inter
+    code: Fira Code
   features:
-    - navigation.expand
-    - search.suggest
-    - search.highlight
+    - navigation.tabs          # Muestra los temas en una barra superior estilo pestañas
+    - navigation.tabs.sticky   # Mantiene las pestañas visibles al hacer scroll
+    - navigation.top           # Añade botón "Volver arriba" al hacer scroll
+    - navigation.sections      # Agrupa apartados de forma limpia
+    - search.suggest           # Búsqueda con sugerencias automáticas
+    - search.highlight         # Resalta las palabras buscadas
+    - content.code.copy        # Botón para copiar bloques de código
 
 nav:
   - Inicio: index.md
