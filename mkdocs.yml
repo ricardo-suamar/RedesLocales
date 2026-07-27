@@ -33,12 +33,14 @@ theme:
     - content.code.copy        # Botón para copiar bloques de código
 
 markdown_extensions:
-<<<<<<< HEAD
+
   # === Cajas de llamada (Admonitions) ===
   - admonition
   - pymdownx.details            # Cajas colapsables (!!! details "Título")
   - pymdownx.superfences         # Bloques de código avanzados y diagramas (Mermaid)
-
+  - attr_list
+  - md_in_html
+  
   # === Código y pestañas ===
   - pymdownx.highlight:         # Resaltado de sintaxis en código
       anchor_linenums: true
@@ -68,11 +70,8 @@ markdown_extensions:
   # === Matemáticas (LaTeX) ===
   - pymdownx.arithmatex:        # Renderizado de ecuaciones ($E = mc^2$)
       generic: true
-=======
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
->>>>>>> fcae81ae00725c35fb537ca5d6ae4b8c9dc6c6ef
+
+
 
 nav:
   - Inicio: index.md
