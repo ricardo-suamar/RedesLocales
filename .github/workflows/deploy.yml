@@ -3,7 +3,7 @@ name: Deploy Documentation
 on:
   push:
     branches:
-      - main  # O 'master', según el nombre de tu rama principal
+      - main  # Cambia a 'master' si tu rama principal se llama así
 
 permissions:
   contents: write
@@ -20,14 +20,21 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: "3.x"
 
-      # 3. Instalar MkDocs y sus complementos (Añade aquí los plugins que uses)
+      # 3. Instalar MkDocs y todas las extensiones avanzadas
       - name: Install dependencies
         run: |
-          pip install mkdocs-material
+          python -m pip install --upgrade pip
+          pip install mkdocs-material pymdown-extensions ghp-import
 
-      # 4. Compilar y Desplegar en la rama gh-pages automáticamente
+      # 4. Configurar bot de Git para el commit de despliegue
+      - name: Configure Git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # 5. Compilar y Desplegar en la rama gh-pages automáticamente
       - name: Deploy to GitHub Pages
         run: |
           mkdocs gh-deploy --force
