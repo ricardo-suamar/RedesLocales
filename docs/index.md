@@ -411,6 +411,7 @@ La Capa de Red puede ser considerada como el "GPS" de la red. Su función críti
 !!! info Nota
     En este ejemplo vamos a obviar que en la comunicación por Whatsapp los mensajes pasar por un servidor. Supondremos que la comunicación es directa entre el movil origen y destino.
 
+
 !!! check **Envío del mensaje (Móvil emisor)**
     Entras en la aplicacción WhatsApp:
     
