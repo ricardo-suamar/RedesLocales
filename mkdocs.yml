@@ -1,0 +1,29 @@
+site_name: Mis Apuntes de Clase
+site_description: Material de estudio y apuntes para los alumnos
+
+theme:
+  name: material
+  palette:
+    # Modo claro / oscuro automático
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Inicio: index.md
+  - Tema 1 - Introducción: tema1.md
