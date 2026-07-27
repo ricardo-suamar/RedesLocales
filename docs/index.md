@@ -412,7 +412,7 @@ La Capa de Red puede ser considerada como el "GPS" de la red. Su función críti
     En este ejemplo vamos a obviar que en la comunicación por Whatsapp los mensajes pasar por un servidor. Supondremos que la comunicación es directa entre el movil origen y destino.
 
 
-!!! check **Envío del mensaje (Móvil emisor)**
+!!! check Envío del mensaje (Móvil emisor)
     Entras en la aplicacción WhatsApp:
     
     **7. Capa de Aplicación:** Escribes "Hola, ¿cómo estás?" en la aplicación de WhatsApp .
@@ -429,7 +429,7 @@ La Capa de Red puede ser considerada como el "GPS" de la red. Su función críti
 
     **1. Capa Física:** Convierte las tramas en señales eléctricas, ópticas o de radio (dependiendo del medio de transmisión: Wi-Fi, 4G, cable Ethernet) que viajan por el medio físico (aire, cables, etc.). Aquí los datos son transmitidos en forma de bits (0s y 1s).
 
-!!! check **Llegada al destino (Móvil receptor)** 
+!!! check Llegada al destino (Móvil receptor)
 
     El mensaje viaja a través de redes intermedias, servidores y dispositivos, y finalmente llega al móvil de tu amiga. Ahora el proceso ocurre en el sentido inverso, desde la Capa Física (Capa 1) hacia la Capa de Aplicación (Capa 7).
 
