@@ -52,12 +52,12 @@ jobs:
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 7. Cifrar todos los archivos HTML a la carpeta 'encrypted_site'
+      # 7. Cifrar todos los archivos HTML a la carpeta 'encrypted_site' (Usando -o)
       - name: Encrypt HTML files
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          staticrypt site -r -d encrypted_site -p "$STATICRYPT_PASSWORD" --remember 30 --short
+          staticrypt site -r -o encrypted_site -p "$STATICRYPT_PASSWORD" --remember 30 --short
 
       # 8. Copiar archivos estáticos (CSS, JS, imágenes) a la carpeta cifrada
       - name: Copy static non-HTML assets
