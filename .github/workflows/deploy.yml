@@ -36,19 +36,16 @@ jobs:
           pip install mkdocs-material pymdown-extensions ghp-import
           npm install -g staticrypt
 
-      # 5. Compilar la web con MkDocs
+      # 5. Compilar la web con MkDocs en la carpeta 'site'
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 6. Cifrar HTMLs forzando la salida a la misma carpeta
+      # 6. Cifrar la carpeta 'site' completa (Sintaxis oficial StatiCrypt v3)
       - name: Encrypt HTML files
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          find site -type f -name "*.html" | while read file; do
-            echo "Procesando $file..."
-            staticrypt "$file" -p "$STATICRYPT_PASSWORD" -o "$file" --overwrite
-          done
+          staticrypt site -o site -r -p "$STATICRYPT_PASSWORD"
 
       # 7. INSPECCIÓN: Verificar en el log si el archivo se cifró realmente
       - name: Inspect generated index.html
