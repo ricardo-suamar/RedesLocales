@@ -40,12 +40,12 @@ jobs:
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 6. Cifrar la carpeta 'site' completa de forma recursiva
+      # 6. Cifrar todos los archivos HTML
       - name: Encrypt HTML files
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          staticrypt site -r -o site -p "$STATICRYPT_PASSWORD"
+          staticrypt "site/**/*.html" -p "$STATICRYPT_PASSWORD" --overwrite
 
       # 7. Evitar que GitHub procese la web con Jekyll
       - name: Prevent Jekyll build
