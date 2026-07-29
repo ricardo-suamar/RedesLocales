@@ -34,19 +34,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material pymdown-extensions ghp-import
-          npm install -g staticrypt
+          npm install -g staticrypt@3.2.1
 
       # 5. Compilar la web con MkDocs
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 6. Cifrar TODOS los HTML (activando globstar para que Bash expanda **)
+      # 6. Cifrar la carpeta 'site' completa de forma recursiva
       - name: Encrypt HTML files
         env:
-          PASS: ${{ secrets.SITIO_PASSWORD }}
+          STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          shopt -s globstar
-          staticrypt site/**/*.html -p "$PASS" --overwrite
+          npx staticrypt site/ -r -o site/ -p "$STATICRYPT_PASSWORD"
 
       # 7. Evitar que GitHub procese la web con Jekyll
       - name: Prevent Jekyll build
