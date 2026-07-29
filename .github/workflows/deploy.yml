@@ -42,13 +42,14 @@ jobs:
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 7. Cifrar todos los archivos HTML usando la variable de entorno nativa de StatiCrypt
-      # Al pasar STATICRYPT_PASSWORD en env, StatiCrypt la detecta automáticamente sin banderas extra
+      # 7. Cifrar la carpeta con StatiCrypt y sobreescribir los HTML originales
+      # site/* -r cifrará todos los archivos y subcarpetas
+      # -d site guardará el resultado cifrado en la misma carpeta 'site'
       - name: Encrypt HTML files in site
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          find site -type f -name "*.html" -exec staticrypt {} --short --remember 30 \;
+          staticrypt "site/*" -r -d site --remember 30 --short
 
       # 8. Configurar bot de Git
       - name: Configure Git user
@@ -56,7 +57,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 9. Publicar la carpeta 'site' (con los HTMLs cifrados) en gh-pages
+      # 9. Publicar la carpeta 'site' en la rama gh-pages
       - name: Deploy encrypted site to GitHub Pages
         run: |
           ghp-import -n -p -f site
