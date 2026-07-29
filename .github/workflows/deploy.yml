@@ -59,7 +59,7 @@ jobs:
         run: |
           find site -type f -name "*.html" | while read file; do
             echo "Cifrando $file..."
-            staticrypt "$file" -p "$STATICRYPT_PASSWORD" -o "$file" --remember 30 --short
+            staticrypt "$file" -p "$STATICRYPT_PASSWORD" -o "$file" --short
           done
 
       # 8. Configurar bot de Git
