@@ -29,50 +29,38 @@ jobs:
         with:
           node-version: "20"
 
-      # 4. Sistema de caché de MkDocs
-      - name: Cache MkDocs dependencies
-        run: echo "cache_id=$(date --utc +'%Y%V')" >> $GITHUB_ENV
-
-      - name: Restore Cache
-        uses: actions/cache@v4
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
-
-      # 5. Instalar dependencias
+      # 4. Instalar dependencias
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material pymdown-extensions ghp-import
           npm install -g staticrypt
 
-      # 6. Compilar la web con MkDocs en la carpeta 'site'
+      # 5. Compilar la web con MkDocs en la carpeta 'site'
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 7. Cifrar TODOS los HTML
+      # 6. Cifrar TODOS los HTML dentro de 'site'
       - name: Encrypt HTML files
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
           find site -type f -name "*.html" | while read file; do
             echo "Cifrando $file..."
-            staticrypt "$file" -p "$STATICRYPT_PASSWORD" -o "$file" --short
+            staticrypt "$file" -p "$STATICRYPT_PASSWORD" -o "$file"
           done
 
-      # 8. Evitar que GitHub procese la web con Jekyll
+      # 7. Desactivar el procesado de Jekyll en GitHub Pages
       - name: Prevent Jekyll build
         run: touch site/.nojekyll
 
-      # 9. Configurar bot de Git
+      # 8. Configurar bot de Git
       - name: Configure Git user
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 10. Publicar la carpeta 'site' a la rama gh-pages
+      # 9. Publicar la carpeta 'site' en la rama gh-pages
       - name: Deploy encrypted site
         run: |
           ghp-import -n -p -f site
