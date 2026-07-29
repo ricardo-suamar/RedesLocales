@@ -40,11 +40,12 @@ jobs:
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 6. Cifrar todos los HTML dentro de 'site' de forma nativa
+      # 6. Cifrar TODOS los HTML (activando globstar para que Bash expanda **)
       - name: Encrypt HTML files
         env:
           PASS: ${{ secrets.SITIO_PASSWORD }}
         run: |
+          shopt -s globstar
           staticrypt site/**/*.html -p "$PASS" --overwrite
 
       # 7. Evitar que GitHub procese la web con Jekyll
@@ -57,7 +58,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 9. Publicar la carpeta 'site' cifrada
+      # 9. Publicar la carpeta 'site' cifrada a gh-pages
       - name: Deploy encrypted site
         run: |
           ghp-import -n -p -f site
