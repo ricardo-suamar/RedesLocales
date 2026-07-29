@@ -1,0 +1,2308 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material de estudio y apuntes para los alumnos">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../tema2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tema 1 - Introducción - Mis Apuntes de Clase</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-2-arquitectura-de-redes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mis Apuntes de Clase" class="md-header__button md-logo" aria-label="Mis Apuntes de Clase" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Apuntes de Clase
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 1 - Introducción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tema 1 - Introducción
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tema2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tema 2 - Introducción
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mis Apuntes de Clase" class="md-nav__button md-logo" aria-label="Mis Apuntes de Clase" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mis Apuntes de Clase
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 1 - Introducción
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 1 - Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-el-modelo-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. El modelo OSI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. El modelo OSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estructura-de-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Estructura de Capas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-entidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Entidades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Entidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-comunicacion-vertical-servicios-entre-capas-adyacentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Comunicación Vertical (Servicios entre capas adyacentes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-comunicacion-horizontal-protocolos-entre-capas-pares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Comunicación Horizontal (Protocolos entre Capas Pares)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-entidades-pares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 Entidades Pares
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-protocolos-pares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4 Protocolos Pares
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-unidades-de-informacion-pdu-sdu-pci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Unidades de Información (PDU, SDU, PCI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-encapsulacion-y-desencapsulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Encapsulación y Desencapsulación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-sevicios-vs-protocolos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Sevicios vs. Protocolos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#151-servicios-comunicacion-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Servicios (Comunicación Vertical)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-protocolos-comunicacion-horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Protocolos (Comunicación Horizontal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-las-siete-capas-del-modelo-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Las Siete Capas del Modelo OSI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Las Siete Capas del Modelo OSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-aplicacion-nivel-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Aplicación (Nivel 7)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-presentacion-nivel-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Presentación (Nivel 6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-sesion-nivel-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Sesión (Nivel 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-transporte-nivel-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Transporte (Nivel 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-red-nivel-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Red (Nivel 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-enlace-de-datos-nivel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Enlace de Datos (Nivel 2):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-fisica-nivel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa Física (Nivel 1):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ejemplo-enviando-un-mensaje-por-whatsapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Ejemplo enviando un mensaje por Whatsapp
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-arquitectura-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Arquitectura TCP/IP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Arquitectura TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-historia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Historia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Características
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Características">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-diseno-enfocado-en-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1. Diseño enfocado en la práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-independencia-de-la-tecnologia-subyacente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2. Independencia de la Tecnología Subyacente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-comunicacion-por-conmutacion-de-paquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3. Comunicación por Conmutación de Paquetes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-protocolos-abiertos-y-estandarizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.4. Protocolos Abiertos y Estandarizados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-escalabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.5. Escalabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-limitaciones-y-problematicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Limitaciones y Problemáticas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3. Limitaciones y Problemáticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-agotamiento-del-espacio-de-direcciones-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1. Agotamiento del Espacio de Direcciones IPv4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-falta-de-separacion-de-responsabilidades-entre-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2. Falta de Separación de Responsabilidades entre capas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-seguridad-no-integrada-originalmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3. Seguridad no Integrada Originalmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-las-cuatro-capas-del-modelo-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Las Cuatro Capas del Modelo TCP/IP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4. Las Cuatro Capas del Modelo TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-4-capa-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAPA 4. CAPA DE APLICACIÓN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-3-capa-de-transporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAPA 3. CAPA DE TRANSPORTE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-2-capa-de-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAPA 2. CAPA DE INTERNET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-1-capa-de-acceso-a-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAPA 1. CAPA DE ACCESO A LA RED.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-comparativa-modelo-tcpip-vs-modelo-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Comparativa Modelo TCP/IP vs. Modelo OSI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-equivalencia-de-capas-osi-vs-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Equivalencia de Capas: OSI vs. TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-conclusion-la-relevancia-practica-de-la-arquitectura-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. Conclusión: La Relevancia Práctica de la Arquitectura TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tema2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 2 - Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-el-modelo-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. El modelo OSI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. El modelo OSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estructura-de-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Estructura de Capas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-entidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Entidades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Entidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-comunicacion-vertical-servicios-entre-capas-adyacentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Comunicación Vertical (Servicios entre capas adyacentes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-comunicacion-horizontal-protocolos-entre-capas-pares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Comunicación Horizontal (Protocolos entre Capas Pares)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-entidades-pares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 Entidades Pares
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-protocolos-pares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4 Protocolos Pares
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-unidades-de-informacion-pdu-sdu-pci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Unidades de Información (PDU, SDU, PCI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-encapsulacion-y-desencapsulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Encapsulación y Desencapsulación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-sevicios-vs-protocolos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Sevicios vs. Protocolos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#151-servicios-comunicacion-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Servicios (Comunicación Vertical)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-protocolos-comunicacion-horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Protocolos (Comunicación Horizontal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-las-siete-capas-del-modelo-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Las Siete Capas del Modelo OSI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Las Siete Capas del Modelo OSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-aplicacion-nivel-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Aplicación (Nivel 7)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-presentacion-nivel-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Presentación (Nivel 6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-sesion-nivel-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Sesión (Nivel 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-transporte-nivel-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Transporte (Nivel 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-red-nivel-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Red (Nivel 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-enlace-de-datos-nivel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Enlace de Datos (Nivel 2):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-fisica-nivel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa Física (Nivel 1):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ejemplo-enviando-un-mensaje-por-whatsapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Ejemplo enviando un mensaje por Whatsapp
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-arquitectura-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Arquitectura TCP/IP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Arquitectura TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-historia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Historia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Características
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Características">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-diseno-enfocado-en-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1. Diseño enfocado en la práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-independencia-de-la-tecnologia-subyacente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2. Independencia de la Tecnología Subyacente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-comunicacion-por-conmutacion-de-paquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3. Comunicación por Conmutación de Paquetes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-protocolos-abiertos-y-estandarizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.4. Protocolos Abiertos y Estandarizados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-escalabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.5. Escalabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-limitaciones-y-problematicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Limitaciones y Problemáticas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3. Limitaciones y Problemáticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-agotamiento-del-espacio-de-direcciones-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1. Agotamiento del Espacio de Direcciones IPv4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-falta-de-separacion-de-responsabilidades-entre-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2. Falta de Separación de Responsabilidades entre capas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-seguridad-no-integrada-originalmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3. Seguridad no Integrada Originalmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-las-cuatro-capas-del-modelo-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Las Cuatro Capas del Modelo TCP/IP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4. Las Cuatro Capas del Modelo TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-4-capa-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAPA 4. CAPA DE APLICACIÓN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-3-capa-de-transporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAPA 3. CAPA DE TRANSPORTE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-2-capa-de-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAPA 2. CAPA DE INTERNET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-1-capa-de-acceso-a-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAPA 1. CAPA DE ACCESO A LA RED.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-comparativa-modelo-tcpip-vs-modelo-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Comparativa Modelo TCP/IP vs. Modelo OSI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-equivalencia-de-capas-osi-vs-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Equivalencia de Capas: OSI vs. TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-conclusion-la-relevancia-practica-de-la-arquitectura-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. Conclusión: La Relevancia Práctica de la Arquitectura TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unidad-2-arquitectura-de-redes">Unidad 2. Arquitectura de redes</h1>
+<ul>
+<li><a href="#unidad-2-arquitectura-de-redes">Unidad 2. Arquitectura de redes</a></li>
+<li><a href="#introducción">Introducción</a></li>
+<li><a href="#1-el-modelo-osi">1. El modelo OSI</a><ul>
+<li><a href="#11-estructura-de-capas">1.1. Estructura de Capas</a></li>
+<li><a href="#12-entidades">1.2. Entidades</a></li>
+<li><a href="#121-comunicación-vertical-servicios-entre-capas-adyacentes">1.2.1. Comunicación Vertical (Servicios entre capas adyacentes)</a></li>
+<li><a href="#122-comunicación-horizontal-protocolos-entre-capas-pares">1.2.2. Comunicación Horizontal (Protocolos entre Capas Pares)</a></li>
+<li><a href="#123-entidades-pares">1.2.3 Entidades Pares</a></li>
+<li><a href="#124-protocolos-pares">1.2.4 Protocolos Pares</a></li>
+<li><a href="#13-unidades-de-información-pdu-sdu-pci">1.3. Unidades de Información (PDU, SDU, PCI)</a></li>
+<li><a href="#14-encapsulación-y-desencapsulación">1.4. Encapsulación y Desencapsulación</a></li>
+<li><a href="#15-sevicios-vs-protocolos">1.5 Sevicios vs. Protocolos</a></li>
+<li><a href="#151-servicios-comunicación-vertical">1.5.1. Servicios (Comunicación Vertical)</a></li>
+<li><a href="#152-protocolos-comunicación-horizontal">1.5.2. Protocolos (Comunicación Horizontal)</a></li>
+<li><a href="#16-las-siete-capas-del-modelo-osi">1.6 Las Siete Capas del Modelo OSI</a></li>
+<li><a href="#capa-de-aplicación-nivel-7">Capa de Aplicación (Nivel 7)</a></li>
+<li><a href="#capa-de-presentación-nivel-6">Capa de Presentación (Nivel 6)</a></li>
+<li><a href="#capa-de-sesión-nivel-5">Capa de Sesión (Nivel 5)</a></li>
+<li><a href="#capa-de-transporte-nivel-4">Capa de Transporte (Nivel 4)</a></li>
+<li><a href="#capa-de-red-nivel-3">Capa de Red (Nivel 3)</a></li>
+<li><a href="#capa-de-enlace-de-datos-nivel-2">Capa de Enlace de Datos (Nivel 2):</a></li>
+<li><a href="#capa-física-nivel-1">Capa Física (Nivel 1):</a></li>
+<li><a href="#17-ejemplo-enviando-un-mensaje-por-whatsapp">1.7 Ejemplo enviando un mensaje por Whatsapp</a></li>
+</ul>
+</li>
+<li><a href="#2-arquitectura-tcpip">2. Arquitectura TCP/IP</a><ul>
+<li><a href="#21-historia">2.1. Historia</a></li>
+<li><a href="#22-características">2.2 Características</a></li>
+<li><a href="#221-diseño-enfocado-en-la-práctica">2.2.1. Diseño enfocado en la práctica</a></li>
+<li><a href="#222-independencia-de-la-tecnología-subyacente">2.2.2. Independencia de la Tecnología Subyacente</a></li>
+<li><a href="#223-comunicación-por-conmutación-de-paquetes">2.2.3. Comunicación por Conmutación de Paquetes</a></li>
+<li><a href="#224-protocolos-abiertos-y-estandarizados">2.2.4. Protocolos Abiertos y Estandarizados</a></li>
+<li><a href="#225-escalabilidad">2.2.5. Escalabilidad</a></li>
+<li><a href="#23-limitaciones-y-problemáticas">2.3. Limitaciones y Problemáticas</a></li>
+<li><a href="#231-agotamiento-del-espacio-de-direcciones-ipv4">2.3.1. Agotamiento del Espacio de Direcciones IPv4</a></li>
+<li><a href="#232-falta-de-separación-de-responsabilidades-entre-capas">2.3.2. Falta de Separación de Responsabilidades entre capas</a></li>
+<li><a href="#233-seguridad-no-integrada-originalmente">2.3.3. Seguridad no Integrada Originalmente</a></li>
+<li><a href="#24-las-cuatro-capas-del-modelo-tcpip">2.4. Las Cuatro Capas del Modelo TCP/IP</a></li>
+<li><a href="#capa-4-capa-de-aplicación">CAPA 4. CAPA DE APLICACIÓN</a></li>
+<li><a href="#capa-3-capa-de-transporte">CAPA 3. CAPA DE TRANSPORTE</a></li>
+<li><a href="#capa-2-capa-de-internet">CAPA 2. CAPA DE INTERNET</a></li>
+<li><a href="#capa-1-capa-de-acceso-a-la-red">CAPA 1. CAPA DE ACCESO A LA RED.</a></li>
+<li><a href="#25-comparativa-modelo-tcpip-vs-modelo-osi">2.5. Comparativa Modelo TCP/IP vs. Modelo OSI</a></li>
+<li><a href="#26-equivalencia-de-capas-osi-vs-tcpip">2.6. Equivalencia de Capas: OSI vs. TCP/IP</a></li>
+<li><a href="#27-conclusión-la-relevancia-práctica-de-la-arquitectura-tcpip">2.7. Conclusión: La Relevancia Práctica de la Arquitectura TCP/IP</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="introduccion">Introducción</h2>
+<p>Una arquitectura de red es el <strong>diseño o estructura que define cómo se organizan y comunican los componentes de una red informática</strong>. Es como el plano de una casa que indica dónde va cada habitación y cómo se conectan los servicios. Esta arquitectura especifica las reglas, estándares, protocolos y topologías que determinan cómo los dispositivos (ordenadores, routers y switches) se conectan entre sí y cómo transfieren datos dentro de una red.</p>
+<p>El objetivo principal de esta arquitectura es <strong>dividir un proceso complejo</strong>, como es la transmisión de datos entre dos estaciones, <strong>en partes más manejables</strong>. Este enfoque modular facilita tanto el diseño como la comprensión de las redes.</p>
+<p>Para entender por qué esta división en partes es tan importante, hay que recordar que, a principios de la <strong>década de 1980, el desarrollo de las redes informáticas era un caos</strong>. Cada fabricante creaba sus <strong>propias tecnologías de conexión, que eran propietarias y no compatibles</strong> entre sí. Era como si cada marca de teléfono hablara un idioma diferente y no pudieran llamarse entre sí. Para solucionar este problema de incompatibilidad y desorden, surgieron los modelos de arquitectura de red basados en capas.</p>
+<p>Los dos modelos más conocidos son:</p>
+<ul>
+<li>
+<p>El <strong>Modelo OSI (Open Systems Interconnection)</strong>: Propuesto por la ISO en 1984, es un <strong>modelo teórico de referencia</strong> que ayuda a entender cómo deberían funcionar las comunicaciones en red. Aunque no es una implementación real de una red, se usa mucho para enseñar y comparar otras arquitecturas. Está dividido en <strong>siete capas</strong>.</p>
+</li>
+<li>
+<p>La <strong>arquitectura TCP/IP (Transmission Control Protocol/Internet Protocol)</strong>: Desarrollada por el Departamento de Defensa de EE.UU. para la red ARPANET, es la <strong>más adoptada en la práctica</strong> y es la base de Internet hoy en día. Surgió como una solución práctica y fue ampliamente adoptada. El 1 de enero de 1983, la adopción de TCP/IP en ARPANET marcó el "nacimiento de Internet". Este modelo se estructura en <strong>cuatro o, según algunas interpretaciones, cinco capas</strong>.</p>
+</li>
+</ul>
+<h2 id="1-el-modelo-osi">1. El modelo OSI</h2>
+<p>El <strong>Modelo OSI</strong> (Open Systems Interconnection, o Interconexión de Sistemas Abiertos) es un <strong>modelo de referencia teórico</strong> propuesto por la Organización Internacional de Normalización (ISO) en 1977 y publicado en su versión final en 1984.</p>
+<p>El objetivo principal del modelo OSI es proporcionar un <strong>marco común</strong> que permita a sistemas de diferentes fabricantes interconectarse y comunicarse de forma óptima, como una especie de "traductor universal".</p>
+<p>Aunque el modelo OSI no es una implementación real ni define los protocolos específicos, sí establece un estándar sobre el cual comparar otras arquitecturas y protocolos. Se utiliza ampliamente en la enseñanza para explicar cómo se puede estructurar una "pila" de protocolos de comunicaciones.</p>
+<p><img alt="alt text" src="../img/modelo_osi.png" width="800" /></p>
+<h3 id="11-estructura-de-capas">1.1. Estructura de Capas</h3>
+<p>El modelo OSI divide el complejo proceso de comunicación en <strong>siete capas o niveles jerárquicos</strong>. La idea principal es aplicar el principio de "divide y vencerás", de modo que cada capa se encarga de resolver un problema específico y más sencillo dentro del proceso de comunicación.</p>
+<p>Cada capa <strong>solo interactúa con la capa inmediatamente superior</strong> o inferior. Las capas inferiores <strong>"ofrecen servicios"</strong> o "sirven" a las capas superiores, ocultando los detalles de su implementación. Esto significa que una capa superior solo necesita solicitar un servicio a la inferior sin preocuparse por cómo se lleva a cabo.</p>
+<p>Dentro de cada capa, existen <strong>entidades</strong> que son elementos activos del sistema y que intervienen en la comunicación. Dos entidades que pertenecen a la misma capa, pero están en sistemas diferentes (por ejemplo, dos ordenadores), se denominan <strong>entidades pares</strong> y se comunican virtualmente mediante un <strong>protocolo</strong>. Una <strong>interfaz</strong> define qué operaciones y servicios ofrece un nivel al inmediatamente superior.</p>
+<h3 id="12-entidades">1.2. Entidades</h3>
+<p>Una capa no es un bloque monolítico y abstracto, sino un nivel funcional habitado por elementos activos que ejecutan tareas específicas. Estos elementos son las <strong>entidades</strong>, los verdaderos protagonistas de la comunicación en red.</p>
+<p>En el contexto del modelo OSI, una entidad es el elemento activo dentro de cada capa, implementado ya sea en software, hardware o una combinación de ambos, que implementa las reglas de un protocolo específico para su capa. </p>
+<p>Es la responsable de ejecutar las funciones de dicha capa. Por ejemplo, la entidad de la capa de Sesión es la que establece, administra y finaliza las comunicaciones entre dos sistemas, mientras que la entidad de la capa de Red se encarga del enrutamiento y el direccionamiento lógico.</p>
+<p>Dentro de un mismo sistema (por ejemplo, un host emisor), cada capa contiene una o más entidades. Estas entidades se comunican <strong>verticalmente</strong> con las de las capas inmediatamente superior e inferior para prestar y recibir servicios. Sin embargo, la comunicación no es únicamente vertical; el objetivo final es una comunicación lógica y <strong>horizontal</strong> con sus contrapartes en un sistema remoto.</p>
+<h4 id="121-comunicacion-vertical-servicios-entre-capas-adyacentes">1.2.1. Comunicación Vertical (Servicios entre capas adyacentes)</h4>
+<p>Dentro de un único sistema (por ejemplo, un ordenador), las capas se comunican de forma vertical. Cada <strong>capa n</strong> proporciona servicios a la <strong>capa superior n+1</strong>. Este modelo de servicio es jerárquico: cada capa depende de las funciones que le ofrece la capa que se encuentra directamente debajo de ella. Por ejemplo, la capa de Enlace de Datos presta un servicio a la capa de Red, y esta, a su vez, a la de Transporte.
+Este flujo es el camino <strong>real</strong> (físico) que siguen los datos. En un host emisor (por ejemplo un ordenador), la información desciende a través de las capas, desde la capa de Aplicación hasta la capa Física. En el host receptor, el proceso se invierte y los datos ascienden desde la capa Física hasta que llegan a la aplicación de destino.</p>
+<h4 id="122-comunicacion-horizontal-protocolos-entre-capas-pares">1.2.2. Comunicación Horizontal (Protocolos entre Capas Pares)</h4>
+<p>La comunicación horizontal es la <strong>interacción lógica</strong> que ocurre entre capas iguales (pares u homólogas) en sistemas diferentes, como el origen y el destino. </p>
+<p>Como lo define la normativa: <strong>"La capa n de un computador se comunica con la capa n de otro computador"</strong>. Esta forma de comunicación se conoce como comunicación de par a par.</p>
+<p>Es crucial entender que esta comunicación es lógica, no física. Los datos no saltan directamente de la capa de Transporte de un host a la capa de Transporte de otro. En realidad, viajan físicamente por el flujo vertical. La comunicación horizontal se logra gracias a que las entidades pares de ambos sistemas utilizan un conjunto de reglas y convenciones comunes, un protocolo que ambas entienden y respetan. </p>
+<p><img alt="comunicacion_real_virtual" src="../img/comunicacion_real_virtual.png" /></p>
+<p>En esencia, la comunicación vertical actúa como el servicio postal que transporta los sobres, mientras que la comunicación horizontal es la conversación lógica contenida en las cartas que las entidades pares se envían entre sí.</p>
+<p><img alt="entidades_pares" src="../img/entidades_pares.png" /></p>
+<h4 id="123-entidades-pares">1.2.3 Entidades Pares</h4>
+<p>Las entidades pares (o peer entities) son aquellas que residen en la misma capa en los hosts de origen y destino. Por ejemplo, la entidad de la capa de Red en el Host A y la entidad de la capa de Red en el Host B son entidades pares. Su propósito es establecer una comunicación como si estuvieran directamente conectadas, abstrayendo toda la complejidad de las capas inferiores.</p>
+<h4 id="124-protocolos-pares">1.2.4 Protocolos Pares</h4>
+<p>Para que las entidades pares puedan comunicarse, deben "hablar el mismo idioma". Este idioma compartido es lo que se denomina un <strong>protocolo par</strong>. </p>
+<p>Técnicamente, un protocolo es "un conjunto de normas, o un acuerdo, que determina el formato y la transmisión de datos". </p>
+<p><strong>Las "normas y convenciones que se utilizan en esta comunicación se denominan colectivamente protocolo de la capa n".</strong></p>
+<p>Para hacerlo más accesible, podemos usar analogías. Un protocolo es similar a las reglas de orden que permiten a cientos de representantes debatir en un congreso de forma organizada, o a las reglas específicas que los pilotos obedecen para comunicarse con el control de tráfico aéreo y otros aviones. Sin estas reglas compartidas, la comunicación sería un caos.</p>
+<h3 id="13-unidades-de-informacion-pdu-sdu-pci">1.3. Unidades de Información (PDU, SDU, PCI)</h3>
+<p><img alt="alt text" src="../img/nombre_pdus.png" width="300" /></p>
+<p>Las <strong>entidades pares</strong> intercambian información utilizando Unidades de Datos de Protocolo (PDU). </p>
+<p>Una PDU puede entenderse como el "mensaje" específico que una <strong>capa n</strong> en el origen envía a su <strong>capa n</strong> homóloga en el destino.</p>
+<p>Cada capa de comunicación intercambia su PDU específica con su par en el otro sistema. A medida que los datos descienden por las capas, se van encapsulando, y la PDU de cada capa recibe un nombre distintivo.</p>
+<p>En la siguiente tabla se muestran los PDU asociados a cada capa del modelo OSI:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Capa del modelo OSI</strong></th>
+<th><strong>Nombre de la PDU</strong></th>
+<th><strong>Que nformación contiene el PDU</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>7. Aplicación</strong></td>
+<td>Datos</td>
+<td>La información tal como la genera o usa la aplicación (correo, web, etc.).</td>
+</tr>
+<tr>
+<td><strong>6. Presentación</strong></td>
+<td>Datos</td>
+<td>Se encarga de la traducción, compresión o cifrado, pero sigue tratándose como datos.</td>
+</tr>
+<tr>
+<td><strong>5. Sesión</strong></td>
+<td>Datos</td>
+<td>Gestiona el diálogo entre aplicaciones, la PDU sigue siendo datos.</td>
+</tr>
+<tr>
+<td><strong>4. Transporte</strong></td>
+<td>Segmento (TCP) / Datagrama (UDP)</td>
+<td>Divide los datos en partes más pequeñas para su envío y asegura su entrega o no, según el protocolo.</td>
+</tr>
+<tr>
+<td><strong>3. Red</strong></td>
+<td>Paquete</td>
+<td>Incluye las direcciones lógicas (ej. IP) para encaminar la información entre redes.</td>
+</tr>
+<tr>
+<td><strong>2. Enlace de datos</strong></td>
+<td>Trama</td>
+<td>Añade direcciones físicas (ej. MAC) y control de errores en la transmisión local.</td>
+</tr>
+<tr>
+<td><strong>1. Física</strong></td>
+<td>Bits</td>
+<td>Representa la información como señales eléctricas, ópticas o de radio (0 y 1).</td>
+</tr>
+</tbody>
+</table>
+<p>Para que estas PDUs viajen desde una entidad par a otra, el modelo OSI emplea un ingenioso mecanismo técnico que traduce la comunicación lógica horizontal en una transmisión física vertical.</p>
+<p>Cada PDU se compone de dos partes:
+*   <strong>SDU (Service Data Unit)</strong>: Son los datos que la capa superior (N+1) le entrega a la capa actual (N) para que realice un servicio.
+*   <strong>PCI (Protocol Control Information)</strong>: Es la información de control que la capa actual (N) añade a la SDU, como cabeceras o información final, necesaria para que las entidades pares de esa capa coordinen su operación.</p>
+<h3 id="14-encapsulacion-y-desencapsulacion">1.4. Encapsulación y Desencapsulación</h3>
+<p><img alt="alt text" src="../img/encapsulacion_osi.png" width="600" /></p>
+<p>El proceso de comunicación en el modelo OSI implica la <strong>encapsulación</strong> de los datos a medida que descienden por las capas del sistema emisor.
+1.  Un programa de usuario, en la capa de aplicación (Nivel 7), genera un mensaje o datos.
+2.  Esta capa añade su información de control (PCI) a los datos (SDU) para formar su propia PDU (7-PDU).
+3.  Esta PDU se convierte en la SDU para la capa inferior (Nivel 6, Presentación), que a su vez le añade su propio PCI para crear la PDU de esa capa (6-PDU).
+4.  Este proceso se repite sucesivamente en cada capa descendente (Sesión, Transporte, Red, Enlace de Datos), añadiendo cada una su propia información de control, lo que hace que el tamaño de los datos "engorde" a medida que bajan por la pila.
+5.  Finalmente, la capa física (Nivel 1) convierte toda la información en <strong>bits</strong> (señales eléctricas, ópticas o de radio) que son transmitidos a través del medio físico.</p>
+<p><img alt="alt text" src="../img/encapsulacion_N.png" width="400" /></p>
+<p>En el sistema receptor, ocurre el proceso inverso, llamado <strong>desencapsulación</strong>. A medida que los bits llegan a la capa física del receptor, se van reconstruyendo las PDUs de cada capa. Cada capa lee y retira su información de control (PCI), y pasa los datos "limpios" (SDU) a la capa superior. Este proceso continúa hasta que el mensaje original llega a la aplicación del usuario en la capa de aplicación.</p>
+<p><img alt="alt text" src="../img/desencapsulacion_N.png" width="400" /></p>
+<p>En la siguiente imagen se representa como se encapsulan los datos a enviar en el origen de la transmisión y como se desencapsulan los datos en el destino.</p>
+<p><img alt="alt text" src="../img/encapsula_desencapsula.png" width="800" /></p>
+<h3 id="15-sevicios-vs-protocolos">1.5 Sevicios vs. Protocolos</h3>
+<p>Para comprender la arquitectura del modelo OSI, es crucial diferenciar entre dos conceptos fundamentales: servicios y protocolos. Estos mecanismos definen cómo se comunican las capas tanto dentro de un mismo sistema como entre sistemas diferentes. Se pueden concebir como los ejes de comunicación vertical y horizontal, respectivamente.</p>
+<h3 id="151-servicios-comunicacion-vertical">1.5.1. Servicios (Comunicación Vertical)</h3>
+<p>El concepto de "servicio" describe la interacción entre capas adyacentes dentro de un mismo sistema. Cada capa (denominada capa N) proporciona un conjunto de funciones y capacidades a la capa inmediatamente superior (capa N+1). Por ejemplo, la capa de Red ofrece a la capa de Transporte el servicio de enrutar paquetes a través de la red, sin que la capa de Transporte necesite saber qué ruta específica tomarán esos paquetes. Esta es la comunicación vertical: una capa "hablando" hacia arriba o hacia abajo con sus vecinas directas.</p>
+<h3 id="152-protocolos-comunicacion-horizontal">1.5.2. Protocolos (Comunicación Horizontal)</h3>
+<p>Un "protocolo" es un conjunto de reglas y convenciones que rigen el intercambio de información entre entidades pares, es decir, la misma capa en dos sistemas diferentes que se están comunicando. La capa N de un computador se comunica con la capa N de otro computador mediante el protocolo de la capa N. </p>
+<p>Por ejemplo, cuando navegas por internet, el protocolo HTTP en la capa de Aplicación de tu navegador se comunica con el protocolo HTTP en la capa de Aplicación del servidor web. Esta comunicación es horizontal, ya que ocurre entre capas iguales (pares) en sistemas distintos.</p>
+<p>Para solidificar esta distinción, pensemos en el sistema postal. El servicio es lo que la oficina de correos le ofrece a usted: toma su carta (capa N+1) y se encarga de entregarla (servicio de la capa N). Usted no necesita saber cómo funciona el sistema de camiones y aviones. El protocolo son las reglas que usan las oficinas de correos entre sí para intercambiar sacas de correo, asegurándose de que la dirección de destino sea legible y el franqueo correcto (comunicación horizontal).</p>
+<p>La siguiente tabla resume las diferencias clave entre ambos conceptos:</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Tipo de Comunicación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Servicios</td>
+<td>Vertical</td>
+<td>Interacción entre capas adyacentes dentro del mismo sistema.</td>
+</tr>
+<tr>
+<td>Protocolos</td>
+<td>Horizontal</td>
+<td>Interacción entre capas iguales (pares) en sistemas diferentes.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="16-las-siete-capas-del-modelo-osi">1.6 Las Siete Capas del Modelo OSI</h3>
+<p><img alt="alt text" src="../img/modelo_osi_1.png" width="900" /></p>
+<p>Las siete capas del modelo OSI, de arriba hacia abajo, son las siguientes:</p>
+<h4 id="capa-de-aplicacion-nivel-7">Capa de Aplicación (Nivel 7)</h4>
+<ul>
+<li><strong>Función</strong>: Es la capa <strong>más cercana al usuario</strong> y proporciona acceso a los servicios de red a las aplicaciones de usuario. Define los protocolos que utilizan las aplicaciones para intercambiar datos.</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Detalles</strong>: Incluye protocolos para tareas comunes como la <strong>transferencia de ficheros</strong> (FTP), <strong>acceso remoto</strong> (SSH), <strong>transferencia de hipertexto</strong> (HTTP, HTTPS para navegación web), <strong>correo electrónico</strong> (SMTP, POP, IMAP), <strong>resolución de nombres de dominio</strong> (DNS), y otras funciones como la asignación de direcciones (DHCP) o la compartición de impresoras. El usuario normalmente interactúa con programas (navegadores web, clientes de correo) que a su vez interactúan con esta capa, ocultando la complejidad subyacente.</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Ejemplo (Envío de correo electrónico)</strong>
+    En el caso del correo electrónico, la Capa de Aplicación es donde el usuario escribe el mensaje de correo electrónico. Cuando presiona el botón "Enviar", la aplicación cliente de correo interactúa con el protocolo SMTP para iniciar la transferencia. En este punto, los caracteres alfanuméricos del mensaje se convierten en un flujo de datos listo para ser procesado por las capas inferiores.
+Una vez que los datos están listos para ser enviados, es necesario darles un formato y una estructura que sean comprensibles para el sistema receptor, una tarea que corresponde a la siguiente capa.</li>
+</ul>
+<p><br></p>
+<h4 id="capa-de-presentacion-nivel-6">Capa de Presentación (Nivel 6)</h4>
+<p><img alt="alt text" src="../img/capa_presentacion.png" width="500" /></p>
+<ul>
+<li><strong>Función</strong>: Asegurar que la información enviada por la capa de aplicación de un sistema sea legible y utilizable por la capa de aplicación de otro. Para lograrlo, gestiona las posibles diferencias en la representación de los datos, traduciéndolos a un formato común que ambos sistemas puedan entender.</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Detalles</strong>: Las responsablidades principales de esta capa son:<ul>
+<li><strong>Formato y Traducción de Datos:</strong> Su función principal es traducir los datos a un formato común. Esto es crucial porque diferentes arquitecturas de ordenador pueden representar los datos de manera distinta (p. ej., codificación de caracteres como ASCII vs. EBCDIC).</li>
+<li><strong>Cifrado y Compresión:</strong> Esta capa también se encarga de tareas cruciales de seguridad y eficiencia. Realiza el cifrado (encriptación) de los datos para garantizar la privacidad y proteger la información durante su tránsito. </li>
+<li><strong>Compresión</strong>: Además, puede realizar la compresión de datos para reducir su tamaño, optimizando así el ancho de banda y la velocidad de la transmisión.</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li>
+<p><strong>Ejemplo (Envío de correo electrónico)</strong>: 
+  Al procesar nuestro correo electrónico, la Capa de Presentación toma los datos de la capa superior y podría realizar las siguientes tareas:</p>
+<ul>
+<li>Asegurar que el formato de los caracteres (por ejemplo, ASCII o Unicode) sea compatible entre el sistema del remitente y el del receptor.</li>
+<li><strong>Cifrar</strong> el contenido del mensaje si se está utilizando una conexión segura, protegiendo su confidencialidad.</li>
+<li><strong>Comprimir</strong> cualquier archivo adjunto al correo para reducir su tamaño total y acelerar la transferencia.</li>
+</ul>
+<p>Una vez que los datos son comprensibles, seguros y eficientes, es necesario gestionar el diálogo de comunicación entre los dos sistemas, lo que nos introduce a la Capa de Sesión.</p>
+</li>
+</ul>
+<p><br></p>
+<h4 id="capa-de-sesion-nivel-5">Capa de Sesión (Nivel 5)</h4>
+<p><img alt="alt text" src="../img/capa_sesion.png" width="450" /></p>
+<ul>
+<li><strong>Función</strong>:  La Capa de Sesión actúa como la administradora del diálogo entre dos hosts que se comunican. Su función principal es establecer, gestionar y finalizar las conversaciones, conocidas como <strong>"sesiones</strong>"**, entre las aplicaciones de los sistemas de origen y destino.   </li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Detalles</strong>: Las responsablidades principales de esta capa son:<ul>
+<li><strong>Establecimiento y Finalización de Sesiones</strong>: Inicia y termina formalmente una conexión de comunicación entre dos aplicaciones, asegurando que ambos extremos estén listos para el intercambio de datos.</li>
+<li><strong>Gestión del Diálogo</strong>: Sincroniza el diálogo entre las capas de presentación de los dos hosts. Controla el intercambio de datos, determinando, por ejemplo, si la comunicación es half-duplex (alterna, un lado transmite a la vez) o full-duplex (bidireccional y simultánea).</li>
+<li><strong>Recuperación:</strong> Ofrece mecanismos para la recuperación de sesiones en caso de fallo. Por ejemplo, si se interrumpe una transferencia de archivos grande, esta capa puede insertar puntos de control (checkpoints) en el flujo de datos. Esto permite que la sesión se reanude desde el último punto de control exitoso en lugar de reiniciar toda la transferencia desde el principio.</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li>
+<p><strong>Ejemplo (Envío de correo electrónico)</strong>.
+  En el caso de nuestro correo electrónico, la Capa de Sesión es la responsable de establecer y mantener la conexión entre el cliente de correo del remitente y el servidor de correo del destinatario. Se asegura de que el canal de comunicación permanezca abierto durante el tiempo necesario para transferir completamente el mensaje y sus archivos adjuntos.</p>
+<p>Una vez que la sesión está abierta y el diálogo está gestionado, el siguiente paso es asegurar que los datos se transfieran de manera fiable y ordenada, una tarea que recae sobre la Capa de Transporte.</p>
+</li>
+</ul>
+<p><br></p>
+<h4 id="capa-de-transporte-nivel-4">Capa de Transporte (Nivel 4)</h4>
+<p><img alt="alt text" src="../img/capa_transporte.png" width="500" /></p>
+<ul>
+<li><strong>Función</strong>: La Capa de Transporte es la responsable de la calidad y <strong>fiabilidad de la comunicación de extremo a extremo</strong>. Su función es tomar los datos de la capa de sesión, dividirlos si es necesario, y asegurar que todas las piezas lleguen correctamente al otro extremo.</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Detalles</strong>: Esta capa puede realizar varias funciones vitales para garantizar una comunicación de calidad.<ul>
+<li><strong>Segmentación y Reensamblaje</strong>: Divide los datos provenientes de la capa superior en unidades más pequeñas llamadas <strong>segmentos</strong>. En el host receptor, se encarga de reensamblar estos segmentos en la corriente de datos original.</li>
+<li><strong>Control de Flujo</strong>: Gestiona la velocidad de transmisión de datos para evitar que un sistema emisor rápido sature a un sistema receptor más lento, asegurando una comunicación fluida.</li>
+<li><strong>Control de Errores</strong>: Proporciona mecanismos para la verificación de la integridad de los datos, garantizando que lleguen sin errores. Si un segmento se pierde o llega corrupto, esta capa puede solicitar su retransmisión.</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Protocolos Clave: TCP y UDP</strong>
+Dos de los protocolos más importantes de la Capa de Transporte son TCP y UDP, cada uno con un enfoque diferente para la transmisión de datos. Los veremos más adelante.</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Ejemplo (Envío de correo electrónico)</strong></li>
+</ul>
+<p>Para el envío de un correo electrónico, la fiabilidad es crucial, por lo que se utiliza el protocolo TCP. 
+  Imagina que tu largo correo es demasiado grande para caber en un sobre de tamaño estándar. </p>
+<p>La Capa de Transporte actúa como un empleado de correo que corta la carta en páginas numeradas, coloca cada página en su propio sobre (un segmento) y lleva un registro de cuántos se enviaron para que el destinatario pueda reensamblarlos en el orden correcto y saber si alguno se extravió. Esto garantiza que el destinatario reciba el mensaje íntegro y sin corrupción.</p>
+<p>Ahora que los datos están segmentados y listos para una transferencia fiable, necesitan una dirección para ser enviados a través de la red, lo que nos introduce a la función de la Capa de Red.</p>
+<p><br></p>
+<h4 id="capa-de-red-nivel-3">Capa de Red (Nivel 3)</h4>
+<p><img alt="{alt text}" src="../img/capa_red.png" width="500" />
+*   <strong>Función</strong>: 
+La Capa de Red puede ser considerada como el "GPS" de la red. Su función crítica es proporcionar conectividad y selección de ruta (enrutamiento) entre dos sistemas que pueden estar ubicados en redes geográficamente distintas. Crucialmente, esta es la primera capa que se ocupa del enrutamiento de extremo a extremo a través de diferentes redes, mientras que las capas inferiores solo se preocupan por la comunicación en un único enlace de red local.</p>
+<p><br></p>
+<ul>
+<li>
+<p><strong>Detalles</strong>: Las cuatro funciones principales de esta capa son esenciales para la comunicación global.</p>
+<ul>
+<li>
+<p><strong>Direccionamiento Lógico</strong>: Utiliza direcciones lógicas, como las direcciones IP (IPv4 e IPv6), para identificar de manera única los dispositivos de origen y destino en la red. A diferencia de las direcciones físicas, las direcciones IP permiten la comunicación entre diferentes redes locales.</p>
+</li>
+<li>
+<p><strong>Encapsulamiento</strong>: Recibe los segmentos de la Capa de Transporte y les agrega un encabezado de red, que contiene las direcciones IP de origen y destino. Este proceso encapsula el segmento de la Capa de Transporte dentro de una nueva unidad de datos llamada <strong>paquete.</strong></p>
+</li>
+<li>
+<p><strong>Enrutamiento:</strong> Los dispositivos de esta capa, como los routers, examinan la dirección IP de destino de cada paquete y utilizan tablas de enrutamiento para determinar la mejor ruta o el camino más eficiente para que el paquete viaje a través de la red hasta su destino final.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Dispositivos</strong>: Los <strong>routers</strong> (también conocidos como encaminadores o enrutadores) operan en esta capa, conectando diferentes redes y seleccionando la mejor ruta para los paquetes. Algunos switches avanzados pueden operar como routers de capa 3.</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Protocolos</strong>: El protocolo principal de esta capa es el Protocolo de Internet (IP)-</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Ejemplo (Envío de correo electrónico)</strong>
+  En nuestro ejemplo, cada segmento del correo electrónico es <strong>encapsulado en un paquete</strong>. </li>
+</ul>
+<p>A cada paquete se le añade un encabezado que contiene la dirección IP del ordenador del remitente y la dirección IP del servidor de correo del destinatario. </p>
+<p>A medida que estos paquetes viajan por Internet, los routers en el camino leerán la dirección IP de destino y los reenviarán por la ruta más adecuada para que lleguen a su destino.</p>
+<p>Para que un paquete pueda viajar de un router al siguiente en un enlace de red específico, necesita ser formateado para esa red local. Esta tarea nos lleva a la Capa de Enlace de Datos.</p>
+<p><br></p>
+<h4 id="capa-de-enlace-de-datos-nivel-2">Capa de Enlace de Datos (Nivel 2):</h4>
+<p><img alt="{alt text}" src="../img/capa_enlace.png" width="500" /></p>
+<ul>
+<li><strong>Función</strong>: Asegura la <strong>transmisión de datos sin errores</strong> entre dos dispositivos <strong>directamente conectados</strong>. Mientras que la Capa de Red se ocupa del enrutamiento a través de múltiples redes, esta capa se centra en la comunicación entre dispositivos que están en la misma red local (LAN). Agrupa los bits recibidos de la capa física en unidades lógicas llamadas <strong>tramas (frames)</strong>.</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Detalles</strong>: Esta capa gestiona la comunicación local mediante varias funciones clave.<ul>
+<li><strong>Direccionamiento Físico</strong>: Utiliza direcciones físicas, conocidas como <strong>direcciones MAC</strong> (Control de Acceso al Medio), que están grabadas en el hardware de la tarjeta de red. A diferencia de las direcciones IP lógicas de la Capa 3, que pueden cambiar según la ubicación en la red, la dirección MAC es un identificador permanente y único de una tarjeta de interfaz de red (NIC) dentro de un segmento local.</li>
+<li><strong>Entramado (Framing):</strong> Encapsula los paquetes recibidos de la Capa de Red en unidades de datos llamadas tramas. Este proceso encapsula el paquete de la Capa de Red dentro de una trama, agregando un encabezado (que incluye las direcciones MAC de origen y destino).</li>
+<li><strong>Control de Acceso al Medio (MAC):</strong> Gestiona cómo los dispositivos acceden y comparten el medio de red (como un cable Ethernet o el aire en Wi-Fi) para evitar colisiones cuando varios dispositivos intentan transmitir datos simultáneamente.</li>
+<li><strong>Detección de Errores:</strong> Esta función se logra típicamente añadiendo un tráiler a la trama, como una Secuencia de Verificación de Trama (FCS), que permite al dispositivo receptor verificar si los datos se han corrompido durante el tránsito. Si bien esta capa detecta errores, la corrección a menudo es gestionada por capas superiores (como la Capa 4) que solicitan una retransmisión.</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Protocolos y dispositivos</strong>: </li>
+</ul>
+<p>Los estándares más comunes que operan en esta capa son:</p>
+<div class="language-text highlight"><pre><span></span><code>- **Ethernet** para redes cableadas y 
+- **Wi-Fi** (802.11) para redes inalámbricas.
+
+Los dispositivos principales que funcionan en la Capa 2 son los **switches** (conmutadores), que utilizan las direcciones MAC para reenviar las tramas al dispositivo correcto dentro de la red local.
+</code></pre></div>
+<p><br></p>
+<ul>
+<li><strong>Ejemplo (Envío de correo electrónico)</strong></li>
+</ul>
+<p>El paquete que contiene un fragmento de nuestro correo electrónico es encapsulado en una trama. Esta trama contiene, además del paquete IP, las direcciones MAC del ordenador del remitente (origen) y del siguiente dispositivo en la ruta, que suele ser el router local (destino). Un switch en la red local leerá esta dirección MAC de destino y reenviará la trama directamente al puerto conectado al router, sin necesidad de enviarla a todos los demás dispositivos de la red.</p>
+<p>Con la trama lista, el último paso en el sistema de origen es convertirla en señales físicas y enviarla a través del medio, una tarea que corresponde a la Capa Física.</p>
+<p><br></p>
+<h4 id="capa-fisica-nivel-1">Capa Física (Nivel 1):</h4>
+<p><img alt="capa_fisica" src="../img/capa_fisica.png" width="450" /></p>
+<ul>
+<li><strong>Función</strong>: 
+    Es la capa más baja del modelo OSI y se ocupa de la transmisión y recepción del flujo de bits sin procesar a través de un medio de comunicación físico. Esta capa no interpreta los bits; su única función es convertirlos en señales y enviarlos, o recibir señales y convertirlas de nuevo en bits.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>
+<p><strong>Detalles</strong>: Esta capa se define por las características eléctricas, mecánicas y funcionales del hardware de red. </p>
+<ul>
+<li><strong>Especificaciones Físicas:</strong> Define las características del medio físico, como:</li>
+<li>Los tipos de cable (par trenzado UTP, coaxial, fibra óptica)</li>
+<li>Los conectores (RJ-45)</li>
+<li>Las propiedades eléctricas (niveles de voltaje)</li>
+<li>Las especificaciones mecánicas (forma de los conectores).</li>
+<li><strong>Transmisión de Bits:</strong> Su función principal es convertir las tramas de la Capa de Enlace de Datos en un patrón de unos y ceros (bits) y transmitirlos como señales a través del medio. Estas señales pueden ser:</li>
+<li>Eléctricas (a través de cables de cobre)</li>
+<li>Pulsos de luz (a través de fibra óptica) </li>
+<li>Ondas de radio (en comunicaciones inalámbricas).</li>
+<li><strong>Velocidad de Datos:</strong> Define la velocidad de transmisión, es decir, cuántos bits por segundo se pueden enviar a través del medio.   </li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Ejemplo (Envío de correo electrónico)</strong></li>
+</ul>
+<p>En la etapa final del viaje descendente, la trama que contiene el fragmento de nuestro correo electrónico se convierte en una secuencia de bits (unos y ceros). 
+  La tarjeta de red del ordenador emisor toma estos bits y los codifica en señales: pulsos eléctricos si se usa un cable Ethernet, u ondas de radio si se usa Wi-Fi. 
+  Estas señales viajan a través del medio físico hacia el siguiente dispositivo en la red, como un switch o un router.
+  Con esto, nuestro correo electrónico ha completado su viaje descendente a través de las siete capas y está físicamente en camino hacia su destino.</p>
+<p><br></p>
+<h3 id="17-ejemplo-enviando-un-mensaje-por-whatsapp">1.7 Ejemplo enviando un mensaje por Whatsapp</h3>
+<p><img alt="alt text" src="../img/capas_osi.png" width="600" /></p>
+<div class="admonition info nota">
+<p class="admonition-title">Info</p>
+<p>En este ejemplo vamos a obviar que en la comunicación por Whatsapp los mensajes pasar por un servidor. Supondremos que la comunicación es directa entre el movil origen y destino.</p>
+</div>
+<div class="admonition check">
+<p class="admonition-title">Envío del mensaje (Móvil emisor)</p>
+<p>Entras en la aplicacción WhatsApp:</p>
+<p><strong>7. Capa de Aplicación:</strong> Escribes "Hola, ¿cómo estás?" en la aplicación de WhatsApp .</p>
+<p><strong>6. Capa de Presentación:</strong> Preparación del mensaje para el envío: Se convierte el mensaje en un formato estándar de texto (por ejemplo, UTF-8), asegurándose de que los dispositivos de origen y destino puedan interpretar correctamente el contenido.</p>
+<p><strong>5. Capa de Sesión:</strong> Se necesita establecer una conexión entre tu dispositivo y el dispositivo destino. Esta capa mantiene la sesión abierta mientras se intercambian los datos.</p>
+<p><strong>4. Capa de Transporte:</strong> División en segmentos y control de la transmisión: Se fragmenta el mensaje en pequeños segmentos y los etiqueta con la información necesaria para que lleguen correctamente a su destino. Utiliza el protocolo TCP.</p>
+<p><strong>3. Capa de Red:</strong> Añade la dirección IP de tu móvil y del móvil destino. Se encarga de enrutar los paquetes por las distintas redes para que lleguen a su destino correcto. Aquí los segmentos se convierten en paquetes.</p>
+<p><strong>2. Capa de Enlace de Datos:</strong> Preparación para la transmisión física. Se añade las direcciones MAC (direcciones físicas) de tu dispositivo y del router o antena de la red a la que estás conectado. Los paquetes ahora se convierten en tramas de bits.</p>
+<p><strong>1. Capa Física:</strong> Convierte las tramas en señales eléctricas, ópticas o de radio (dependiendo del medio de transmisión: Wi-Fi, 4G, cable Ethernet) que viajan por el medio físico (aire, cables, etc.). Aquí los datos son transmitidos en forma de bits (0s y 1s).</p>
+</div>
+<div class="admonition check">
+<p class="admonition-title">Llegada al destino (Móvil receptor)</p>
+<p>El mensaje viaja a través de redes intermedias, servidores y dispositivos, y finalmente llega al móvil de tu amiga. Ahora el proceso ocurre en el sentido inverso, desde la Capa Física (Capa 1) hacia la Capa de Aplicación (Capa 7).</p>
+<p><strong>1. Capa Física:</strong> Recepción de los bits: Los bits que se <strong>transmitieron</strong> a través del aire o de los cables son captados por el receptor (el móvil de tu amiga) y convertidos nuevamente en tramas en la Capa Física (Capa 1).</p>
+<p><strong>2. Capa de Enlace de Datos:</strong> Verificación de errores: las tramas se verifican para detectar posibles errores. Si todo está en orden, la información pasa a la siguiente capa.</p>
+<p><strong>3. Capa de Red:</strong> Procesamiento de la ruta y dirección: Se asegura de que el mensaje llegó al dispositivo correcto utilizando las direcciones IP. Desempaqueta los datos y los envía hacia arriba.</p>
+<p><strong>4. Capa de Transporte:</strong> Reensamblado de los segmentos: reagrupa las tramas en el orden correcto y verifica que no haya errores ni datos perdidos. Si falta algo, puede solicitar que se retransmitan los datos.</p>
+<p><strong>5. Capa de Sesión:</strong> Gestión de la sesión: asegura que la comunicación continúe fluida hasta que se reciba todo el mensaje.</p>
+<p><strong>6. Capa de Presentación:</strong> Conversión de los datos: convierte los datos del mensaje (por ejemplo, en ASCII) en texto legible para la otra persona.</p>
+<p><strong>7. Capa de Aplicación:</strong> Visualización del mensaje: Finalmente, esta capa se encarga de mostrar el mensaje "Hola, ¿cómo estás?" en la pantalla de la aplicación de WhatsApp de tu amigo.</p>
+</div>
+<p><br></p>
+<h2 id="2-arquitectura-tcpip">2. Arquitectura TCP/IP</h2>
+<p>La arquitectura TCP/IP (Transmission Control Protocol/Internet Protocol, Protocolo de control de la transmisión/Protocolo de internet) es la arquitectura más adoptada para la Interconexión de sistemas. </p>
+<h3 id="21-historia">2.1. Historia</h3>
+<p>En 1969, una agencia del departamento de defensa de Estados Unidos llamada  <strong>"Advanced Research Projects Agency" (ARPA)</strong>,  desarrolló una red experimental empleada en ambientes universitarios denominada <strong>ARPANET</strong>. </p>
+<p>Al principlo, esta red estaba montada sobre lineas telefonicas alquiladas; sin embargo, con el tiempo comenzaron a unirse otro tipo de redes que empleaban satélltes o enlaces de radio. El problema era que cada red utilizaba protocolos propios e incompatibles, lo que impedía una comunicación universal. </p>
+<p>Para resolverlo, en 1973 Vinton Cerf y Robert Kahn diseñaron una nueva arquitectura de comunicación basada en dos protocolos complementarios: <strong>TCP</strong>, encargado de garantizar la fiabilidad de la transmisión, e <strong>IP</strong>, encargado del direccionamiento y encaminamiento de los paquetes. </p>
+<p><img alt="alt text" src="../img/arpanet.png" width="600" /></p>
+<p>En 1974 publicaron las bases de este modelo en un artículo pionero, y en 1978 el protocolo original se dividió formalmente en TCP e IP, quedando configurada la estructura actual. </p>
+<p>El 1 de enero de 1983, ARPANET adoptó oficialmente <strong>TCP/IP</strong>, lo que permitió unir redes distintas bajo un mismo estándar. Con ello se solucionaron los problemas de incompatibilidad, escalabilidad y robustez, sentando las bases de lo que hoy conocemos como Internet.</p>
+<h3 id="22-caracteristicas">2.2 Características</h3>
+<p>La arquitectura TCP/IP representa el típico ejemplo de desarrollo tecnológico donde la <strong>práctica prevalece sobre la teoría</strong>. A diferencia del modelo OSI, que fue concebido como un marco teórico de referencia, TCP/IP emergió como solución concreta a problemas reales de comunicación, evolucionando desde su implementación en ARPANET hasta convertirse en el <strong>estándar de facto para las comunicaciones globales</strong>. Su origen tan práctica explica tanto su eficacia como algunas de sus limitaciones</p>
+<p>La arquitectura <strong>TCP/IP</strong> recibe ese nombre porque se constituyó originalme por <strong>dos protocolos clave</strong>:</p>
+<ul>
+<li><strong>TCP (Transmission Control Protocol)</strong> → se encarga de dividir los datos en segmentos, asegurar que lleguen sin errores y en orden correcto, y reensamblarlos en el destino.</li>
+<li><strong>IP (Internet Protocol)</strong> → se encarga de direccionar y enrutar los paquetes de datos para que lleguen al destino correcto, aunque pasen por muchas redes intermedias.</li>
+</ul>
+<h4 id="221-diseno-enfocado-en-la-practica">2.2.1. Diseño enfocado en la práctica</h4>
+<p>Hay que tener en cuenta que TCP/IP no se creó siguiendo un plan teórico perfecto, sino que nació para resolver un problema concreto: el ejército estadounidense necesitaba una red de comunicaciones que siguiera funcionando incluso si algunas de sus partes eran destruidas.</p>
+<p><strong>¿Qué significa esto en la práctica?</strong></p>
+<ul>
+<li><strong>Primero lo que funciona:</strong> En lugar de buscar el diseño teórico "perfecto" (como el modelo OSI con sus 7 capas muy definidas), los creadores de TCP/IP priorizaron que la red funcionara de manera fiable ante fallos.</li>
+<li><strong>Simplificando cuando era posible:</strong> Si en la práctica separar algunas funciones en capas distintas complicaba demasiado las cosas o no aportaba beneficios reales, preferían juntarlas en una misma capa. Es decir, optaban por la solución simple y efectiva frente a la teóricamente "más correcta".</li>
+<li><strong>La funcionalidad por delante:</strong> El objetivo principal era que la comunicación se mantuviera, aunque eso significara que el diseño no fuera tan puro o elegante desde un punto de vista académico.</li>
+</ul>
+<p>En resumen: TCP/IP es como el mecánico experto que prefiere usar la herramienta que sabe que funciona, aunque no sea la más bonita, antes que perder tiempo con un plan teórico impecable que en la práctica no soluciona el problema. Se creó para ser útil y robusto, no para ser un modelo teórico perfecto.</p>
+<h4 id="222-independencia-de-la-tecnologia-subyacente">2.2.2. Independencia de la Tecnología Subyacente</h4>
+<p>La clave de TCP/IP está en que <strong>no depende del tipo de conexión física que uses</strong>. Podría decirse que es "agnóstico" respecto al medio de transmisión.</p>
+<p><strong>¿Qué significa esto en la práctica?</strong></p>
+<ul>
+<li><strong>Funciona con todo:</strong> Da igual si te conectas por cable Ethernet, fibra óptica, WiFi, 4G/5G, o incluso por satélite. TCP/IP se adapta a cualquier tecnología de red.</li>
+<li><strong>Un lenguaje común:</strong> Gracias a la estandarización entre la capa de Internet (direcciones IP) y la capa de Acceso a la Red, diferentes tecnologías pueden comunicarse entre sí sin problemas.</li>
+<li><strong>Integración transparente:</strong> Puedes tener una red que combine, por ejemplo, conexiones por cable en la oficina con enlaces inalámbricos para dispositivos móviles, y todo funcionará como un sistema unificado.</li>
+</ul>
+<p>En esencia: TCP/IP actúa como un <strong>traductor universal</strong> que permite entenderse a tecnologías muy diferentes, haciendo posible que Internet sea tan diversa y accesible desde cualquier tipo de dispositivo y conexión.</p>
+<h4 id="223-comunicacion-por-conmutacion-de-paquetes">2.2.3. Comunicación por Conmutación de Paquetes</h4>
+<p>Este principio consiste en dividir la información en bloques pequeños llamados paquetes, que viajan de forma independiente por la red hasta su destino.</p>
+<p><strong>Funcionamiento básico:</strong></p>
+<ul>
+<li><strong>Fragmentación:</strong> Cuando envías un archivo o mensaje grande, TCP/IP lo divide en porciones más manejables (paquetes)</li>
+<li><strong>Rutas independientes:</strong> Cada paquete puede tomar caminos diferentes a través de la red según la disponibilidad de los enlaces</li>
+<li><strong>Reensamblaje:</strong> En el destino, todos los paquetes se vuelven a unir para reconstruir la información original</li>
+</ul>
+<p><strong>Ventajas clave:</strong></p>
+<ul>
+<li><strong>Uso eficiente:</strong> La red puede aprovechar mejor las conexiones disponibles</li>
+<li><strong>Robustez:</strong> Si una ruta falla, los paquetes pueden desviarse por caminos alternativos</li>
+<li><strong>Flexibilidad:</strong> Múltiples comunicaciones pueden compartir los mismos enlaces de forma simultánea</li>
+</ul>
+<p>Es similar a enviar un documento largo por correo dividido en varias cartas que pueden llegar por rutas diferentes, pero que al final se reúnen para formar el documento completo.</p>
+<h4 id="224-protocolos-abiertos-y-estandarizados">2.2.4. Protocolos Abiertos y Estandarizados</h4>
+<p>TCP/IP se basa en especificaciones técnicas que son públicas y accesibles para todos. Esto significa que cualquier fabricante o desarrollador puede consultar cómo funcionan estos protocolos y crear sus propios productos compatibles.</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Documentación pública:</strong> Las especificaciones técnicas (conocidas como RFC) están disponibles para que cualquiera las estudie y utilice</li>
+<li><strong>Estándares comunes:</strong> Existe un conjunto de reglas bien definidas que todos siguen</li>
+<li><strong>Sin restricciones:</strong> No hay que pagar licencias ni pedir permisos para implementar estos protocolos</li>
+</ul>
+<p><strong>Ventajas que ofrece:</strong></p>
+<ul>
+<li><strong>Compatibilidad universal:</strong> Dispositivos de diferentes marcas pueden comunicarse sin problemas</li>
+<li><strong>Adopción generalizada:</strong> Al ser abierto, todo el mundo puede usarlo, lo que favorece su expansión</li>
+<li><strong>Interoperabilidad:</strong> Sistemas muy distintos pueden trabajar juntos porque siguen las mismas normas</li>
+</ul>
+<p><strong>Estándares</strong>:</p>
+<ul>
+<li>
+<p>Los estándares de <strong>TCP/IP</strong> se publican en una serie de documentos denominados <strong>Requests for Comments (RFC)</strong>, o <strong>Solicitudes de Comentarios</strong>.</p>
+</li>
+<li>
+<p>Su objetivo principal es <strong>proporcionar información</strong> o <strong>describir el estado de desarrollo</strong> de un protocolo o tecnología.</p>
+</li>
+<li>
+<p>Aunque en un principio no fueron creados para servir como estándares, <strong>muchos RFC han sido aceptados posteriormente como tales</strong> y constituyen la base del funcionamiento de Internet.</p>
+</li>
+<li>
+<p>📖 Puedes consultar los RFC en el sitio oficial del IETF:
+👉 <a href="https://www.rfc-editor.org/">https://www.rfc-editor.org/</a></p>
+</li>
+<li>
+<p>Un ejemplo muy conocido es el <strong>RFC 791</strong>, que define el protocolo IP:
+👉 <a href="https://www.rfc-editor.org/rfc/rfc791">RFC 791 - Internet Protocol</a></p>
+</li>
+</ul>
+<p><strong>En esencia</strong>, es como si las reglas de TCP/IP fueran un "libro de instrucciones" que todo el mundo puede leer y usar libremente, garantizando que todos hablemos el mismo lenguaje en Internet.</p>
+<h4 id="225-escalabilidad">2.2.5. Escalabilidad</h4>
+<p>La escalabilidad de TCP/IP significa que está diseñado para poder crecer de forma casi ilimitada sin que la red deje de funcionar correctamente.</p>
+<p><strong>¿Cómo lo consigue?</strong></p>
+<ul>
+<li><strong>Direccionamiento organizado:</strong> Las direcciones IP se asignan de forma jerárquica, como un sistema de códigos postales que permite localizar dispositivos de manera eficiente</li>
+<li><strong>Enrutamiento escalonado:</strong> Los routers trabajan en niveles, desde redes locales hasta troncales principales, distribuyendo el tráfico de forma ordenada</li>
+<li><strong>Expansión progresiva:</strong> Se pueden añadir nuevas redes y dispositivos sin necesidad de cambiar toda la estructura existente</li>
+</ul>
+<p><strong>El resultado práctico:</strong>
+Esta característica es lo que ha permitido que Internet pase de conectar unos pocos ordenadores a interconectar miles de millones de dispositivos en todo el mundo, manteniendo la capacidad de seguir creciendo en el futuro.</p>
+<h3 id="23-limitaciones-y-problematicas">2.3. Limitaciones y Problemáticas</h3>
+<h4 id="231-agotamiento-del-espacio-de-direcciones-ipv4">2.3.1. Agotamiento del Espacio de Direcciones IPv4</h4>
+<p>Las direcciones IPv4 usan un sistema de 32 bits, lo que permite crear aproximadamente 4.300 millones de direcciones únicas.</p>
+<p><strong>¿Por qué esto es un problema?</strong>
+- Hoy existen muchos más dispositivos conectados (móviles, tablets, ordenadores, IoT) que direcciones disponibles
+- Es como si tuviéramos 4.300 millones de números de teléfono para todo el mundo, pero hay más personas y dispositivos que necesitan teléfono</p>
+<p><strong>Soluciones que se han aplicado:</strong></p>
+<ul>
+<li><strong>NAT (Traducción de Direcciones de Red)</strong></li>
+<li>Es como tener un "conmutador" en una oficina: todos comparten un número principal</li>
+<li>Varios dispositivos en una red local usan una sola dirección IP pública</li>
+<li>
+<p>Solución temporal pero muy extendida</p>
+</li>
+<li>
+<p><strong>Migración a IPv6</strong></p>
+</li>
+<li>La solución definitiva: IPv6 usa 128 bits, lo que permite direcciones prácticamente ilimitadas</li>
+<li>
+<p>Es como pasar de tener 4.300 millones de números de teléfono a tener tantos que no se acabarían nunca</p>
+</li>
+<li>
+<p><strong>Situación actual:</strong></p>
+</li>
+<li>Seguimos usando ambas soluciones: NAT para aliviar la falta de IPv4, mientras avanzamos hacia IPv6</li>
+<li>Es un proceso lento porque requiere actualizar equipos y redes</li>
+</ul>
+<h4 id="232-falta-de-separacion-de-responsabilidades-entre-capas">2.3.2. Falta de Separación de Responsabilidades entre capas</h4>
+<p>En el modelo TCP/IP, las tres capas superiores del modelo OSI (Aplicación, Presentación y Sesión) se agrupan en una sola capa: la capa de aplicación.</p>
+<p><strong>¿Qué significa esto en la práctica?</strong></p>
+<ul>
+<li><strong>Menos especialización:</strong> En lugar de tener capas separadas para funciones específicas, todo se gestiona dentro de la misma capa de aplicación</li>
+<li><strong>Mayor carga para las aplicaciones:</strong> Los programas deben encargarse de tareas que en OSI estarían repartidas, como:</li>
+<li>El formato de los datos (función de presentación)</li>
+<li>El control de diálogo y sesiones (función de sesión)</li>
+<li><strong>Posibles solapamientos:</strong> Diferentes aplicaciones pueden implementar las mismas funcionalidades de maneras distintas</li>
+</ul>
+<p><strong>Consecuencia:</strong>
+Esta simplificación hace que TCP/IP sea más práctico, pero también puede generar cierta confusión sobre qué parte corresponde a la aplicación y qué parte al protocolo, ya que los límites no están tan bien definidos como en el modelo OSI.</p>
+<h4 id="233-seguridad-no-integrada-originalmente">2.3.3. Seguridad no Integrada Originalmente</h4>
+<p>Cuando se creó TCP/IP, la seguridad no era una prioridad en el diseño inicial. Esto significa que los protocolos básicos no incluían protecciones incorporadas.</p>
+<p><strong>¿Qué problemas genera esto?</strong></p>
+<ul>
+<li><strong>Datos viajan "en claro":</strong> Inicialmente, la información se transmitía sin cifrar, como si se enviara una postal por correo que cualquiera puede leer</li>
+<li><strong>Sin verificación de identidad:</strong> No había mecanismos para asegurar quién estaba realmente al otro lado de la comunicación</li>
+<li><strong>Falta de protección integral:</strong> Cada aplicación o servicio tenía que buscar sus propias soluciones de seguridad</li>
+</ul>
+<p><strong>Soluciones que se añadieron después:</strong></p>
+<ul>
+<li><strong>IPsec:</strong> Protege la comunicación entre dispositivos a nivel de red (Tunel cifrado de las VPN)</li>
+<li><strong>TLS/SSL:</strong> El famoso "candado" que cifra nuestras conexiones web y de aplicaciones</li>
+<li><strong>Sistemas de autenticación:</strong> Métodos para verificar la identidad de usuarios y dispositivos</li>
+</ul>
+<p>En esencia, la seguridad en TCP/IP llegó como "parches" posteriores, en lugar de estar integrada desde el principio en el diseño.</p>
+<h3 id="24-las-cuatro-capas-del-modelo-tcpip">2.4. Las Cuatro Capas del Modelo TCP/IP</h3>
+<p>La arquitectura del modelo TCP/IP se organiza en una estructura de <strong>cuatro capas</strong>: 
+- Aplicación
+- Transporte
+- Internet 
+- Acceso a la Red </p>
+<p>Se trata de un modelo de capas similar al que tiene el modelo OSI.</p>
+<p><img alt="alt text" src="../img/CapasTcpIp.png" width="500" /></p>
+<p><br></p>
+<h4 id="capa-4-capa-de-aplicacion">CAPA 4. CAPA DE APLICACIÓN</h4>
+<p>Esta capa proporciona servicios directamente a las aplicaciones del usuario, permitiendo que programas en diferentes dispositivos se comuniquen entre sí.</p>
+<p>Los protocolos clave que operan en esta capa son:</p>
+<ul>
+<li><strong>HTTP</strong> (Hypertext Transfer Protocol): para la navegación web.</li>
+<li><strong>SMTP</strong> (Simple Mail Transfer Protocol): para enviar correos electrónicos.</li>
+<li><strong>FTP</strong> (File Transfer Protocol): para transferir archivos.</li>
+<li><strong>DNS</strong> (Domain Name System): para resolver nombres de dominio en direcciones IP.</li>
+</ul>
+<p><strong>Ejemplo de Protocolo:</strong> El protocolo HTTP se utiliza cuando un navegador web solicita una página a un servidor para poder mostrarla al usuario.</p>
+<p><br></p>
+<h4 id="capa-3-capa-de-transporte">CAPA 3. CAPA DE TRANSPORTE</h4>
+<p>La función principal de esta capa es gestionar la conexión de extremo a extremo entre dos dispositivos y asegurar la integridad de los datos. Oculta los detalles complejos de la red a las capas superiores y ofrece dos modos principales de transmisión:</p>
+<p><strong>Protocolos Clave</strong>
+  * <strong>TCP</strong> (Transmission Control Protocol)
+  * <strong>UDP</strong> (User Datagram Protocol)</p>
+<p>Dos de los protocolos más importantes de la Capa de Transporte son TCP y UDP, cada uno con un enfoque diferente para la transmisión de datos.</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>TCP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confiabilidad</td>
+<td>Confiable</td>
+<td>No confiable</td>
+</tr>
+<tr>
+<td>Orientación a la conexión</td>
+<td>Sí (establece conexión antes de enviar)</td>
+<td>No (envía datos sin conexión previa)</td>
+</tr>
+<tr>
+<td>Caso de uso típico</td>
+<td>Correo electrónico, transferencia de archivos</td>
+<td>Streaming de video, juegos en línea</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>!!! check <strong>El protocolo TCP (Transmission Control Protocol) - El Metódico y Precavido</strong></p>
+<div class="language-text highlight"><pre><span></span><code>¿Por qué se dice que TCP es un protocolo **confiable**?. Por lo siguientes motivos:
+
+1.  **Confirmación de Recepción:** Por cada segmento de datos que envía el receptor, el destinatario le devuelve un &quot;¡Recibido!&quot; (ACK). Si el emisor envía un paquete y no recibe el &quot;ACK&quot; después de un tiempo, lo reenvía automáticamente.
+2.  **Control de Flujo:** Regula la velocidad de envío para no saturar al receptor.
+3.  **Control de Secuencia:** Numera cada segmento para que, si llegan desordenados, el receptor sepa cómo reensamblarlos en el orden correcto.
+4.  **Control de Congestión:** Detecta cuándo la red está saturada y reduce automáticamente la velocidad de envío para evitar colapsos.
+
+En resumen, TCP es confiable porque:
+- ✅ Garantiza que **todos** los datos lleguen
+- ✅ Garantiza que lleguen **en orden**
+- ✅ Se adapta a las condiciones de la red
+
+&gt;En TCP la unidades de información que se manejan se denominan **segmentos** que están numerados para poder ordenarlos en el destino.
+
+¿Porqué se dice que TCP es un protocolo **orientado a conexión**?
+
+TCP es **orientado a conexión** porque antes de enviar datos establece un “acuerdo” entre los dos equipos. Para saber **qué aplicación** debe recibir esos datos, se usan los **puertos** (por ejemplo, el 80 para webs o el 25 para correo).
+Durante la comunicación, TCP se asegura de que la información llegue **entera, en orden y sin pérdidas**, y al terminar se **cierra la conexión de forma ordenada**.
+</code></pre></div>
+<p><br></p>
+<p>!!! check <strong>El protocolo UDP (User Datagram Protocol) - El Rápido y Directo</strong>
+    ¿Por qué se dice que UDP <strong>NO es confiable</strong>?
+    1.  <strong>Sin Confirmación:</strong> Envía los datos en trozos (datagramas) y "cruza los dedos". No espera un "¡Recibido!" (ACK) del destinatario. Si un paquete se pierde por el camino, <strong>nadie se da cuenta y no se reenvía.</strong>
+    2.  <strong>Sin Control de Orden:</strong> Los trozos pueden llegar en cualquier orden, y el receptor debe manejar esta situación
+    3.  <strong>Sin Control de Flujo o Congestión:</strong> Va a toda velocidad, sin importar si el receptor puede procesar los datos o si la red está congestionada.</p>
+<div class="language-text highlight"><pre><span></span><code>En resumen, UDP NO es confiable porque:
+- ❌ **No garantiza** que todos los datos lleguen
+- ❌ **No garantiza** que lleguen en orden
+- ❌ **No se adapta** a las condiciones de la red
+
+&gt;En UDP la unidades de información que se manejan se denominan **datagramos** que no están numerados. Cada datagrama es independiente y autónomo, no tiene relación con el anterior datagrama ni el siguiente.
+
+¿Entonces por qué se usa UDP? ¡Porque es **MUY RÁPIDO**!
+
+Ejemplos de uso perfectos para UDP:
+- **Videollamadas y Streaming:** Preferimos perder algún datagrama (un pequeño pixelado) antes que sufrir retrasos.
+- **Juegos Online:** La velocidad es crítica. Es mejor saber rápidamente dónde está un jugador, aunque se pierda alguna actualización.
+</code></pre></div>
+<p><br></p>
+<p>!!! check <strong>Comparativa TPC vs. UDP</strong></p>
+<div class="language-text highlight"><pre><span></span><code>| Característica | TCP (El Precavido) | UDP (El Veloz) |
+|----------------|-------------------|----------------|
+| **Fiabilidad** | ✅ Alta | ❌ Baja |
+| **Velocidad** | ⚠️ Moderada | ✅ Muy Alta |
+| **Control de Flujo** | ✅ Sí | ❌ No |
+| **Reenvío de Paquetes** | ✅ Sí | ❌ No |
+| **Conexión** | ✅ Orientado a conexión | ❌ Sin conexión |
+
+**Conclusión:** No es que uno sea &quot;mejor&quot; que el otro. Son **herramientas diferentes para necesidades diferentes**. ¿Necesitas garantías? Usa TCP. ¿Necesitas velocidad? Usa UDP.
+</code></pre></div>
+<p><br></p>
+<h4 id="capa-2-capa-de-internet">CAPA 2. CAPA DE INTERNET</h4>
+<p>La capa de Internet es responsable del direccionamiento lógico y el enrutamiento de paquetes de datos a través de múltiples redes. Su función principal es determinar la mejor ruta que deben seguir los datos desde su origen hasta su destino final, utilizando dispositivos llamados <strong>routers</strong> para redirigir los paquetes. Los protocolos más importantes son:
+  * <strong>IP (Internet Protocol)</strong>: Es el protocolo más importante de esta capa. Gestiona las direcciones IP, que actúan como la "dirección postal" de cada dispositivo en la red.
+  * <strong>ICMP (Internet Control Message Protocol)</strong>: Utilizado para enviar mensajes de error y de control.
+  * <strong>OSPF (Open Shortest Path First):</strong> Un protocolo de enrutamiento utilizado para encontrar la mejor ruta para los paquetes.</p>
+<p><br></p>
+<h4 id="capa-1-capa-de-acceso-a-la-red">CAPA 1. CAPA DE ACCESO A LA RED.</h4>
+<p>Esta capa gestiona la conexión física del dispositivo a la red. Se encarga de traducir las direcciones IP lógicas a direcciones físicas (direcciones MAC) y de empaquetar los datos en tramas para su transmisión a través de un medio físico, ya sea un cable de red o una señal inalámbrica. </p>
+<p>Los protocolos y estándares comunes incluyen:
+  * <strong>ARP</strong> (Address Resolution Protocol): Realiza la traducción de direcciones IP a direcciones MAC.
+  * <strong>Ethernet</strong> (IEEE 802.3): Estándar para redes cableadas locales.
+  * <strong>Wi-Fi</strong> (IEEE 802.11): Estándar para redes inalámbricas locales.
+  * <strong>PPP</strong>(Point-to-Point Protocol): Utilizado para conexiones directas entre dos nodos.</p>
+<ul>
+<li><strong>Ejemplo de Protocolo</strong>: Ethernet gestiona cómo se transmiten las tramas de datos entre dos dispositivos conectados al mismo segmento de red local, como una computadora y un router en una oficina.</li>
+</ul>
+<h3 id="25-comparativa-modelo-tcpip-vs-modelo-osi">2.5. Comparativa Modelo TCP/IP vs. Modelo OSI</h3>
+<p>Al analizar la arquitectura de redes, es común encontrar una comparación entre el modelo TCP/IP y el modelo OSI. Sus filosofías de diseño son fundamentalmente distintas. </p>
+<p><strong>TCP/IP es un modelo práctico</strong> que fue diseñado e implementado a partir de un proyecto real (ARPANET) en la década de 1970. Su enfoque se basa en protocolos específicos que demostraron su eficacia en redes operativas. </p>
+<p>En contraste, el <strong>modelo OSI es un modelo de referencia teórico</strong> y más detallado, compuesto por siete capas. Fue desarrollado como un estándar académico para explicar y comprender los conceptos de comunicación en red, pero no se implementa directamente en la práctica.</p>
+<p>!!! check La conclusión clave es que TCP/IP es el modelo que se utiliza en la práctica para el funcionamiento de Internet y la gran mayoría de las redes modernas, mientras que el modelo OSI sirve principalmente como una herramienta conceptual y educativa.</p>
+<h3 id="26-equivalencia-de-capas-osi-vs-tcpip">2.6. Equivalencia de Capas: OSI vs. TCP/IP</h3>
+<p>La siguiente imagen muestra cómo las siete capas teóricas del modelo OSI se corresponden con las cuatro capas prácticas del modelo TCP/IP.</p>
+<p><img alt="alt text" src="../img/comparacion_OSI_TCPIP.png" width="700" /></p>
+<p>A continuación podemos ver las equivalencia entre las capas de OSI y TCP en formato tabla</p>
+<table>
+<thead>
+<tr>
+<th><strong>Modelo OSI (7 Capas)</strong></th>
+<th><strong>Modelo TCP/IP (4 Capas)</strong></th>
+<th><strong>Función Principal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capa 7: Aplicación</td>
+<td>Capa de Aplicación</td>
+<td>Interacción con el usuario y aplicaciones, formato de datos.</td>
+</tr>
+<tr>
+<td>Capa 6: Presentación</td>
+<td>Capa de Aplicación</td>
+<td>Interacción con el usuario y aplicaciones, formato de datos.</td>
+</tr>
+<tr>
+<td>Capa 5: Sesión</td>
+<td>Capa de Aplicación</td>
+<td>Interacción con el usuario y aplicaciones, formato de datos.</td>
+</tr>
+<tr>
+<td>Capa 4: Transporte</td>
+<td>Capa de Transporte</td>
+<td>Transferencia de datos (TCP/UDP).</td>
+</tr>
+<tr>
+<td>Capa 3: Red</td>
+<td>Capa de Internet</td>
+<td>Enrutamiento y direccionamiento de datos (IP).</td>
+</tr>
+<tr>
+<td>Capa 2: Enlace de Datos</td>
+<td>Capa de Acceso a la Red</td>
+<td>Direcciones físicas (MAC) y control de acceso al medio.</td>
+</tr>
+<tr>
+<td>Capa 1: Física</td>
+<td>Capa de Acceso a la Red</td>
+<td>Direcciones físicas (MAC) y control de acceso al medio.</td>
+</tr>
+</tbody>
+</table>
+<p>El modelo de referencla OSI y la arquitectura TCP/IP presentan ciertas similitudes y diferencias. </p>
+<p><strong>Similitudes:</strong></p>
+<ul>
+<li>Ambos describen una arquitectura jerárquica en capas o niveles.</li>
+<li>La funcionalidad de las capas guarda cierta correspondencia.</li>
+</ul>
+<p><strong>Diferencias</strong></p>
+<ul>
+<li>El modelo OSI se fundamenta en los conceptos de servicios, interfaces y protocolos, mientras que en TCP/IP se obvian.</li>
+<li>El modelo OSI oculta mejor los protocolos presentando una mayor modularidad e independencia.</li>
+<li>El modelo OSI se desarrolló con anterioridad al desarrollo de sus protocolos, mientras que en el caso de TCP/IP primero se implementaron los protocolos y posteriormente surgió el modelo, que no era más que una descripción de estos. Es decir, el modelo OSI llegó al mercado demasiado tarde para poder convertirse realmente en un standard.</li>
+<li>La cantidad de capas definidas es diferente en ambos modelos.</li>
+<li>En el nivel de transporte de TCP/IP se permiten comunicaciones orientadas a la conexion y no orientadas a la conexion, mientras que en OSI solo se permiten comunicaciones orientadas a la conexion en este nivel.</li>
+<li>En el nivel de red de TCP/IP solo se permiten comunicaciones no orientadas a la conexion, mientras que en este nivel del modelo OSI se permiten ambos tipos.</li>
+</ul>
+<h3 id="27-conclusion-la-relevancia-practica-de-la-arquitectura-tcpip">2.7. Conclusión: La Relevancia Práctica de la Arquitectura TCP/IP</h3>
+<p>En resumen, el modelo TCP/IP no es solo un concepto teórico, sino el motor funcional que impulsa la comunicación digital global. Su enfoque práctico y su arquitectura modular en cuatro capas —Aplicación, Transporte, Internet y Acceso a la Red— han demostrado ser la clave de la escalabilidad, resiliencia y éxito de Internet. Desde el envío de un correo electrónico hasta la navegación por una página web, cada acción en la red se rige por los protocolos y la estructura definidos en este modelo.</p>
+<p>Por lo tanto, comprender el funcionamiento de estas cuatro capas, la interacción entre sus protocolos y el proceso de encapsulación es esencial para cualquier profesional que busque dominar los fundamentos sobre los que operan las redes del mundo real y la comunicación digital moderna.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.sections", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
