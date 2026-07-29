@@ -34,7 +34,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material pymdown-extensions ghp-import
-          npm install -g staticrypt@3.2.1
+          npm install -g staticrypt
 
       # 5. Compilar la web con MkDocs
       - name: Build site with MkDocs
@@ -45,7 +45,7 @@ jobs:
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          npx staticrypt site/ -r -o site/ -p "$STATICRYPT_PASSWORD"
+          staticrypt site -r -o site -p "$STATICRYPT_PASSWORD"
 
       # 7. Evitar que GitHub procese la web con Jekyll
       - name: Prevent Jekyll build
