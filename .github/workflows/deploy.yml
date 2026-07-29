@@ -42,26 +42,20 @@ jobs:
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 7. Copiar archivos estáticos (CSS, JS, imágenes) a la carpeta de salida
-      - name: Copy static assets
-        run: |
-          mkdir -p encrypted_site
-          rsync -av --exclude='*.html' site/ encrypted_site/
-
-      # 8. Cifrar todos los HTML con StatiCrypt (Usando -o para la carpeta de destino)
-      - name: Encrypt site with StatiCrypt
+      # 7. Cifrar los HTML directamente dentro de la carpeta 'site'
+      - name: Encrypt HTML files in site
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          staticrypt site -r -p "$STATICRYPT_PASSWORD" -o encrypted_site --remember 30
+          find site -type f -name "*.html" -exec staticrypt {} -p "$STATICRYPT_PASSWORD" -o {} --remember 30 \;
 
-      # 9. Configurar bot de Git
+      # 8. Configurar bot de Git
       - name: Configure Git user
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 10. Publicar la carpeta cifrada en la rama gh-pages
+      # 9. Publicar la carpeta 'site' (con HTMLs cifrados y assets intactos) en gh-pages
       - name: Deploy encrypted site to GitHub Pages
         run: |
-          ghp-import -n -p -f encrypted_site
+          ghp-import -n -p -f site
