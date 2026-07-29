@@ -3,7 +3,8 @@ name: Deploy Documentation
 on:
   push:
     branches:
-      - main  # Cambia a 'master' si tu rama principal se llama así
+      - main
+      - master
 
 permissions:
   contents: write
@@ -28,28 +29,35 @@ jobs:
         with:
           node-version: "20"
 
-      # 4. Instalar MkDocs y extensiones
-      - name: Install Python dependencies
+      # 4. Sistema de caché de MkDocs
+      - name: Cache MkDocs dependencies
+        run: echo "cache_id=$(date --utc +'%Y%V')" >> $GITHUB_ENV
+
+      - name: Restore Cache
+        uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
+      # 5. Instalar dependencias de Python y StatiCrypt
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material pymdown-extensions ghp-import
+          npm install -g staticrypt
 
-      # 5. Instalar StatiCrypt de forma global
-      - name: Install StatiCrypt
-        run: npm install -g staticrypt
-
-      # 6. Compilar Markdown a HTML en la carpeta 'site'
+      # 6. Compilar la web con MkDocs
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 7. Cifrar la carpeta con StatiCrypt y sobreescribir los HTML originales
-      # site/* -r cifrará todos los archivos y subcarpetas
-      # -d site guardará el resultado cifrado en la misma carpeta 'site'
+      # 7. Cifrar los HTML compilados pasando la contraseña de forma explícita (-p)
       - name: Encrypt HTML files
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          staticrypt site -r -d site --remember 30 --short
+          staticrypt site -r -d site -p "$STATICRYPT_PASSWORD" --remember 30 --short
 
       # 8. Configurar bot de Git
       - name: Configure Git user
@@ -57,7 +65,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 9. Publicar la carpeta 'site' en la rama gh-pages
-      - name: Deploy encrypted site to GitHub Pages
+      # 9. Publicar la versión cifrada a GitHub Pages
+      - name: Deploy encrypted site
         run: |
           ghp-import -n -p -f site
