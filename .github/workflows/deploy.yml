@@ -45,11 +45,11 @@ jobs:
       # 7. Cifrar la carpeta con StatiCrypt y sobreescribir los HTML originales
       # site/* -r cifrará todos los archivos y subcarpetas
       # -d site guardará el resultado cifrado en la misma carpeta 'site'
-      - name: Encrypt HTML files in site
+      - name: Encrypt HTML files
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          staticrypt "site/*" -r -d site --remember 30 --short
+          staticrypt site -r -d site --remember 30 --short
 
       # 8. Configurar bot de Git
       - name: Configure Git user
