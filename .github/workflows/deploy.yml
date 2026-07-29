@@ -22,19 +22,42 @@ jobs:
         with:
           python-version: "3.x"
 
-      # 3. Instalar MkDocs y todas las extensiones avanzadas
-      - name: Install dependencies
+      # 3. Configurar Node.js (necesario para ejecutar StatiCrypt)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # 4. Instalar MkDocs y extensiones
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material pymdown-extensions ghp-import
 
-      # 4. Configurar bot de Git para el commit de despliegue
+      # 5. Instalar StatiCrypt de forma global
+      - name: Install StatiCrypt
+        run: npm install -g staticrypt
+
+      # 6. Compilar Markdown a HTML en la carpeta 'site'
+      - name: Build site with MkDocs
+        run: mkdocs build -d site
+
+      # 7. Cifrar la web compilada con StatiCrypt
+      # Toma los archivos de 'site/', los cifra y los guarda en 'encrypted_site/'
+      # --remember 30 le evita a tus alumnos meter la clave durante 30 días en su navegador
+      - name: Encrypt site with StatiCrypt
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
+        run: |
+          staticrypt site/* -r -p "$STATICRYPT_PASSWORD" -d encrypted_site --remember 30
+
+      # 8. Configurar bot de Git
       - name: Configure Git user
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 5. Compilar y Desplegar en la rama gh-pages automáticamente
-      - name: Deploy to GitHub Pages
+      # 9. Publicar la carpeta cifrada ('encrypted_site') en la rama gh-pages
+      - name: Deploy encrypted site to GitHub Pages
         run: |
-          mkdocs gh-deploy --force
+          ghp-import -n -p -f encrypted_site
