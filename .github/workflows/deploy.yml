@@ -34,20 +34,52 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material pymdown-extensions ghp-import
-          npm install -g staticrypt
+          npm install staticrypt
 
-      # 5. Compilar la web con MkDocs en la carpeta 'site'
+      # 5. Compilar la web con MkDocs
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 6. Cifrar la carpeta 'site' completa (Sintaxis oficial StatiCrypt v3)
+      # 6. Cifrar los HTML mediante un script Node.js infalible
       - name: Encrypt HTML files
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          staticrypt site -o site -r -p "$STATICRYPT_PASSWORD"
+          node -e '
+          const fs = require("fs");
+          const path = require("path");
+          const { execSync } = require("child_process");
 
-      # 7. INSPECCIÓN: Verificar en el log si el archivo se cifró realmente
+          function getHtmlFiles(dir) {
+            let results = [];
+            const list = fs.readdirSync(dir);
+            list.forEach(file => {
+              file = path.join(dir, file);
+              const stat = fs.statSync(file);
+              if (stat && stat.isDirectory()) {
+                results = results.concat(getHtmlFiles(file));
+              } else if (file.endsWith(".html")) {
+                results.push(file);
+              }
+            });
+            return results;
+          }
+
+          const files = getHtmlFiles("site");
+          const password = process.env.STATICRYPT_PASSWORD;
+
+          if (!password) {
+            console.error("ERROR CRÍTICO: La contraseña SITIO_PASSWORD está vacía en secretos.");
+            process.exit(1);
+          }
+
+          files.forEach(file => {
+            console.log("Cifrando:", file);
+            execSync(`npx staticrypt "${file}" -p "${password}" -o "${file}" --overwrite`);
+          });
+          '
+
+      # 7. INSPECCIÓN: Verificar que index.html cambió
       - name: Inspect generated index.html
         run: |
           echo "=== INICIO DE INDEX.HTML ==="
