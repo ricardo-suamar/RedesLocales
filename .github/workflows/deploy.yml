@@ -36,28 +36,38 @@ jobs:
           pip install mkdocs-material pymdown-extensions ghp-import
           npm install -g staticrypt
 
-      # 5. Compilar la web con MkDocs en la carpeta 'site'
+      # 5. Compilar la web con MkDocs
       - name: Build site with MkDocs
         run: mkdocs build -d site
 
-      # 6. Cifrar los HTML (Parámetros ANTES de los archivos + confirmación en log)
+      # 6. Cifrar HTMLs forzando la salida a la misma carpeta
       - name: Encrypt HTML files
         env:
           STATICRYPT_PASSWORD: ${{ secrets.SITIO_PASSWORD }}
         run: |
-          find site -type f -name "*.html" -exec staticrypt -p "$STATICRYPT_PASSWORD" --overwrite {} +
+          find site -type f -name "*.html" | while read file; do
+            echo "Procesando $file..."
+            staticrypt "$file" -p "$STATICRYPT_PASSWORD" -o "$file" --overwrite
+          done
 
-      # 7. Evitar que GitHub procese la web con Jekyll
+      # 7. INSPECCIÓN: Verificar en el log si el archivo se cifró realmente
+      - name: Inspect generated index.html
+        run: |
+          echo "=== INICIO DE INDEX.HTML ==="
+          head -n 20 site/index.html
+          echo "=== FIN DE INDEX.HTML ==="
+
+      # 8. Evitar que GitHub procese la web con Jekyll
       - name: Prevent Jekyll build
         run: touch site/.nojekyll
 
-      # 8. Configurar bot de Git
+      # 9. Configurar bot de Git
       - name: Configure Git user
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 9. Publicar la carpeta 'site' cifrada a gh-pages
+      # 10. Publicar la carpeta 'site' cifrada a gh-pages
       - name: Deploy encrypted site
         run: |
           ghp-import -n -p -f site
